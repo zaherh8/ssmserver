@@ -18,6 +18,7 @@ config :ssmserver, Ssmserver.Repo,
   port: 5434,
   show_sensitive_data_on_connection_error: true,
   pool_size: 100
+
 # Configures the endpoint
 config :ssmserver, SsmserverWeb.Endpoint,
   url: [host: "localhost"],

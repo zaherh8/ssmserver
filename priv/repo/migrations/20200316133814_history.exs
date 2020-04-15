@@ -5,6 +5,7 @@ defmodule Ssmserver.Repo.Migrations.History do
     create table(:history, prefix: "ssm") do
       add :product, references(:products)
       add :date, :string
+      add :quantity, :integer
       timestamps()
     end
   end

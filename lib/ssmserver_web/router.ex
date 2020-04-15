@@ -14,7 +14,6 @@ defmodule SsmserverWeb.Router do
     plug :accepts, ["json"]
   end
 
-
   scope "/", SsmserverWeb do
     pipe_through :browser
 
@@ -32,9 +31,6 @@ defmodule SsmserverWeb.Router do
 
     forward("/", Absinthe.Plug, schema: SsmserverWeb.Schema)
   end
-
-
-
 
   # Other scopes may use custom stacks.
   # scope "/api", SsmserverWeb do

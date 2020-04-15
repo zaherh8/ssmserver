@@ -12,8 +12,8 @@ defmodule Ssmserver.Repo.Migrations.Products do
       add :brand, :string
       add :lastordered, :string
       add :lastscan, :string
+      add :category, :string
       timestamps()
     end
   end
 end
-
