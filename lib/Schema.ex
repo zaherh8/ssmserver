@@ -27,6 +27,12 @@ defmodule SsmserverWeb.Schema do
       resolve(&ProductResolver.get_product/2)
     end
 
+    @desc "return a product"
+    field :getproductbybarcode, type: :product do
+      arg(:barcode, non_null(:string))
+      resolve(&ProductResolver.get_product_by_barcode/2)
+    end
+
     @desc "return all users"
     field :user, type: list_of(:user) do
       resolve(&UserResolver.get_users/2)

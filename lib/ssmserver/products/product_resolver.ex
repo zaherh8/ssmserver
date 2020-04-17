@@ -18,6 +18,10 @@ defmodule SsmserverWeb.ProductResolver do
     {:ok, Products.get_product!(Map.get(args, :id))}
   end
 
+  def get_product_by_barcode(args, _info) do
+    {:ok, Products.get_product_by(args)}
+  end
+
   def delete_product(args, _info) do
     Products.delete_product(Products.get_product!(Map.get(args, :id)))
   end

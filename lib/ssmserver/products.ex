@@ -101,4 +101,8 @@ defmodule Ssmserver.Products do
   def change_product(%Product{} = product) do
     Product.changeset(product, %{})
   end
+
+  def get_product_by(params) do
+    Repo.get_by(Product, params)
+  end
 end
