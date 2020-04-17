@@ -22,7 +22,7 @@ defmodule SsmserverWeb.UserResolver do
     user = Users.get_user(args)
 
     if is_nil(user) do
-      {:ok, %{username: "0", id: 0}}
+      {:ok, %{email: "0", id: 0}}
     else
       {:ok, user}
     end

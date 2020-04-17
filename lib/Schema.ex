@@ -46,7 +46,7 @@ defmodule SsmserverWeb.Schema do
 
     @desc "return a user"
     field :validateuser, type: :user do
-      arg(:username, non_null(:string))
+      arg(:email, non_null(:string))
       arg(:password, non_null(:string))
       resolve(&UserResolver.validate_user/2)
     end
