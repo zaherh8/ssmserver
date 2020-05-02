@@ -18,9 +18,10 @@ defmodule Ssmserver.MixProject do
   #
   # Type `mix help compile.app` for more information.
   def application do
+
     [
       mod: {Ssmserver.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :bamboo]
     ]
   end
 
@@ -32,7 +33,9 @@ defmodule Ssmserver.MixProject do
   #
   # Type `mix help deps` for examples and options.
   defp deps do
-    [
+    [ {:mailgun, "~> 0.1.2"},
+      {:bamboo, "~>0.8.0"},
+      {:bamboo_smtp, "~> 1.4.0"},
       {:phoenix, "~> 1.4.11"},
       {:phoenix_pubsub, "~> 1.1"},
       {:phoenix_ecto, "~> 4.0"},
@@ -49,7 +52,7 @@ defmodule Ssmserver.MixProject do
       {:absinthe_relay, "~> 1.4"},
       {:absinthe_phoenix, "~> 1.4"},
       {:httpoison, "~> 1.4.0"},
-      {:poison, "~> 4.0"},
+      {:poison, "~> 2.1", override: true},
       {:cors_plug, "~> 1.5"}
     ]
   end

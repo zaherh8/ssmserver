@@ -19,7 +19,7 @@ defmodule SsmserverWeb.Router do
 
     get "/", PageController, :index
   end
-
+ forward  "/sent_emails", Bamboo.SentEmailViewerPlug
   scope "/api" do
     # pipeline through which the request have to be routed
     pipe_through(:api)

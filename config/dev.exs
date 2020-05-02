@@ -9,6 +9,20 @@ config :ssmserver, Ssmserver.Repo,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
+config :ssmserver,
+  mailgun_domain: "https://api.mailgun.net/sandboxf094ee0f815c409c8412ca666f1d1ff7.mailgun.org",
+  mailgun_key: "pubkey-82c28a7a09f5f28672cfdafe21d20880"
+
+config :ssmserver, Emailapp.Mailer,
+  adapter: Bamboo.SMTPAdapter,
+  server: "smtp.mailgun.com",
+  port: 587,
+  username: "brad@sandboxf094ee0f815c409c8412ca666f1d1ff7.mailgun.org",
+  password: "Zaher123h",
+  tls: :if_available, # can be `:always` or `:never`
+ #":system", ALLOWED_TLS_VERSIONS"} w/ comma seprated values (e.g. "tlsv1.1,tlsv1.2")
+  ssl: false, # can be `true`
+  retries: 1
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #

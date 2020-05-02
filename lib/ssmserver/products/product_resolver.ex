@@ -27,6 +27,8 @@ defmodule SsmserverWeb.ProductResolver do
   end
 
   def update_product(args, _info) do
-    Products.update_product(Products.get_product!(Map.get(args, :id)), args)
+    IO.inspect(args)
+    # Products.update_product(Products.get_product!(Map.get(args, :id)), args)
+    {:ok, %{text: "worked"}}
   end
 end

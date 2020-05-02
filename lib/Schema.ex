@@ -27,7 +27,7 @@ defmodule SsmserverWeb.Schema do
       resolve(&ProductResolver.get_product/2)
     end
 
-    @desc "return a product"
+    @desc "return a product by barcode"
     field :getproductbybarcode, type: :product do
       arg(:barcode, non_null(:string))
       resolve(&ProductResolver.get_product_by_barcode/2)
@@ -66,6 +66,12 @@ defmodule SsmserverWeb.Schema do
       arg(:price, :float)
       arg(:quantity, :integer)
       resolve(&ProductResolver.create_product/2)
+    end
+
+    @desc "update a product"
+    field :updateproduct, type: :message do
+      arg(:products, non_null(list_of(:inputproduct)))
+      resolve(&ProductResolver.update_product/2)
     end
 
     @desc "create a user"
