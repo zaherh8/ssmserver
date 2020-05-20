@@ -6,7 +6,7 @@ defmodule Ssmserver.Replenishments.Replenishment do
     field :active, :boolean, default: false
     field :condition, :string
     field :email, :string
-    field :product, :integer
+    field :product, :string
     field :quantity, :integer
     field :quantitytoorder, :integer
     timestamps()

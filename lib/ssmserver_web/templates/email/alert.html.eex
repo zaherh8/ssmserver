@@ -1,0 +1,17 @@
+<span class="user-title"><%= assigns[:title]%></span> <%= assigns[:last_name]%>
+<br/>
+<br/>
+<div class="paragraph1">
+Following our latest scan in our warehouse, We would like you to know that the product <span class="product"><%= assigns[:product_name]%> </span>
+is running below the acceptable limit. An order might be required as soon as possible. Please take the required measures.
+</div>
+<br/>
+<br/>
+<br/>
+<div>
+For further information, do not hesitate to access our plateform or
+<br/>
+directly by mail via this email address <a href="mailto:hassanzaher11@.com">hassanzaher11@gmail.com</a>.
+</div>
+<br/>
+<br/>

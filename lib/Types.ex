@@ -33,7 +33,7 @@ defmodule SsmserverWeb.Types do
     field(:lastscanned, :string)
     field(:barcode, :string)
     field(:category, :string)
-    field(:id, :integer)
+    field(:supplier, :string)
   end
 
   object :alert do

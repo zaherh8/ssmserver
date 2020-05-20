@@ -1,0 +1,484 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Fundimmo Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Amaranth:400,700');
+      @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,500i,400i');
+
+      .title, .title * {
+        font-family:  'Amaranth', Trebuchet MS, sans-serif;
+        /*font-size: calc(17px + (22 - 17) * ((100vw - 1025px) / (1560 - 1025)));*/
+        /*font-size: 22px;
+        text-align: center;
+        color: black;
+        font-weight: 700; */
+      }
+
+      .title {
+        font-family:  'Amaranth', Trebuchet MS, sans-serif;
+        padding-bottom: 20px;
+        font-size: 22px;
+        text-align: center;
+        color: red;
+        font-weight: 700; 
+      }
+
+      .capitalize {
+        text-transform: capitalize;
+      }
+
+      .uppercase {
+        text-transform: uppercase;
+      }
+
+      .logo {
+        text-align: center;
+        padding: 15px 0 0;
+      }
+
+      .main-container {
+        background: #eaeaea;
+        font-size: 16px;
+      }
+
+      .sub-container {
+        background: white;
+        border-collapse: collapse;
+        margin: 30px auto;
+      }
+
+      .button {
+        background-color: #582D60; 
+        border-radius: 10px;
+        font-size: 20px;
+        padding: 0 20px;
+        font-weight: 400;
+        color:white; 
+        font-family: 'Amaranth', Trebuchet MS, sans-serif;
+      }
+
+      .button-wrapper {
+        color:white; 
+        text-decoration: none; 
+        font-family:  'Amaranth', Trebuchet MS, sans-serif;
+        font-size: 14px;
+      }
+      .paragraph{
+        font-family: 'Amaranth', Trebuchet MS, sans-serif;
+        margin-left: 20px;
+        margin-right: 20px;
+        color: lightblue;
+        margin-left:10px;
+        margin-right:10px;
+      }
+      .paragraph1{
+        font-family: 'Amaranth', Trebuchet MS, sans-serif;
+        margin-left: 20px;
+        margin-right: 20px;
+        color: lightblue;
+        margin-left:10px;
+        margin-right:10px;
+      }
+      .paragraph .email {
+        color: #E03C3A;
+      }
+
+      .paragraph a {
+        color: #E03C3A;
+        text-decoration: underline;
+      }
+
+      .paragraph, .paragraph * {
+        font-family: 'Montserrat', Trebuchet MS, sans-serif; 
+        color: #333; 
+        line-height: 1.3  ;
+      }
+      
+      .paragraph .notice {
+        color: #E03C3A;
+        font-size: 11px;
+        font-style: italic;
+      }
+      
+      .footer , .footer * {
+        font-family: 'Montserrat', Trebuchet MS, sans-serif; 
+        
+        line-height: 1.25; 
+        color: #333; 
+      }
+
+      .footer {
+        padding: 0;
+      }
+
+      .social-media-title {
+        font-family: 'Montserrat', Trebuchet MS, sans-serif; padding: 10px 20px 10px 20px; color: #666; font-size: 15px;
+      }
+
+      .social-link, .social-link * {
+        font-family: 'Amaranth', Trebuchet MS, sans-serif;
+      }
+
+      .social-link a {
+        text-decoration: none;
+        font-size: 15px;
+      }
+
+      .social-link .linkedin {
+        color: #0077b5;
+      }
+
+      .social-link .twitter {
+        color: #00aced;
+      }
+
+      .social-link .fb {
+        color: #3b5998;
+      }
+
+      .social-link .yt {
+        color: #bb0000;
+      }
+
+      .footer-container {
+        padding: 40px 0 15px;
+      }
+
+      .seperator {
+        vertical-align: bottom;
+        line-height: 20px;
+        font-size: 25px;
+      }
+
+      .footer-image {
+        margin-right: 15px;
+      }
+
+      .paragraph .user-title a, .paragraph .old a, .paragraph .new a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      .label {
+        font-weight: bold;
+      }
+
+      .label.main {
+        margin: 15px 0;
+      }
+
+      .user-id, .rib-user-id, .rib-user-id * {
+        color: #E03C3A;
+        font-weight: 700;
+      }
+
+      .user-id {
+        text-transform: uppercase;
+      }
+
+      .group {
+        border-top: 1px solid #eaeaea;
+      }
+
+      .pending-ribs-main .group.first {
+        border-top: none;
+      }
+
+      .old, .field {
+        margin-bottom: 10px;
+      }
+
+      .user-title, .rib-user-title {
+        margin-top: 20px;
+      }
+
+      .rib-user-title a {
+        text-decoration: none;
+      }
+      .user-title, .rib-user-title, .new, .date {
+        margin-bottom: 20px;
+      }
+
+      .user-changes-main {
+        text-align: left;
+        width: 70%;
+      }
+
+      .pending-ribs-main {
+        text-align: left;
+        width: 85%;
+      }
+
+      .souscription-ul {
+        width: 50%;
+        text-align: left;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .souscription-ul li {
+        margin-left: 0;
+        font-size:13px;
+      }
+      .souscription-ul li .bullet-point {
+        background-color: #582D60;
+        width: 0.5em;
+        height: 0.5em;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 0.5em;
+        margin-bottom: 0.2em;
+        vertical-align: middle;
+      }
+      
+      .user-title {
+        text-transform: capitalize;
+      }
+
+      table.souscriptions-collected.columns {
+        text-align: center;
+      }
+
+      table.souscriptions-collected.columns td.column {
+        width: 40%;
+        vertical-align: middle;
+
+      }
+
+      table.souscriptions-collected.columns td.first, 
+      table.souscriptions-collected.columns td.last {
+        border: 1px solid;
+        border-radius: 10px;
+      }
+
+      table.souscriptions-collected.columns td.column.first  {
+        border-color: #cecece;
+      }
+      
+      table.souscriptions-collected.columns td.column.last {
+        border-color: #582D60;
+      }
+
+      table.souscriptions-collected.columns tr.row.first td {
+        height: 60px;
+      }
+      
+      table.souscriptions-collected.columns tr.row.last td {
+        height: 130px;
+        padding: 0 10px;
+      }
+
+      table.souscriptions-collected.columns tr.row.arrow td {
+        height: 40px;
+      }
+
+      table.souscriptions-collected.columns tr.column-footer .column {
+        background: #eaeaea;
+        border-radius: 10px;
+        height: 70px;
+        padding: 0 10px; 
+      }
+
+      a.button {
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        height: 40px;
+        line-height: 40px;
+        color:white; 
+        font-family: 'Amaranth', Trebuchet MS, sans-serif;
+        margin-top: 10px;
+      }
+
+      .icon-image {
+        margin: 15px 0;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      
+      .icon-image img {
+        width: 100%;
+        height: auto;
+      }
+      .espace_gauche_droite{
+        margin-left:25px;
+        margin-right:25px;
+      }
+      .product{
+        font-weight: bold;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <body style="margin: 0; padding: 0;">
+      <table  class="main-container" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td>
+            <table
+              align="center"
+              class="sub-container" 
+              cellpadding="0"
+              cellspacing="0"
+              width="60%"
+            >
+              <%= if assigns[:logo_url] do %>
+                <tr>
+                  <td class="logo">
+                    <img src="<%= @logo_url %>?tk53st" alt="" />
+                  </td>
+                </tr>
+              <% end %>
+              <tr>
+                <td style="font-size: 0; line-height: 0;" height="50">&nbsp;</td>
+              </tr>
+              <%= if assigns[:title] do %>
+                <tr >
+                  <td class="title">
+                    <%= raw(@title) %>
+                  </td>
+                </tr>
+              <% end %>
+              <%= if assigns[:p1] do %>
+              <tr>
+                <td class="paragraph" align="center">
+                  <%= raw(@p1) %>
+                </td>
+              </tr>
+              <% end %>
+
+              <%= if assigns[:link] && assigns[:lname] do %>
+              <tr>
+                <td style="font-size: 0; line-height: 0;" height="25">&nbsp;</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="<%= @link %>" class="button-wrapper" >
+                    <table
+                      align="center"
+                      
+                      cellpadding="0"
+                      cellspacing="0"
+                      width=""
+                      style="border-collapse: collapse;"
+                    >
+                    
+                      <tr>
+                        <td class="button" align="center" height="40">
+                          <%= @lname %>
+                        </td>
+                      </tr>
+                    </table>
+                    </a>
+                </td>
+              </tr>
+              <% end %>
+              <tr>
+                <td style="font-size: 0; line-height: 0;" height="25">&nbsp;</td>
+              </tr>
+              <%= if assigns[:p2] do %>
+              <tr>
+                <td align="center" class="paragraph" >
+                  <%= raw(@p2) %>
+                </td>
+              </tr>
+              <% end %>
+
+              <%= if assigns[:linkedin] || assigns[:yt] || assigns[:fb] || assigns[:twitter] do %>
+              <tr>
+
+                <td class="social-media-title" align="center" >
+                  Suivez-nous sur
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <table
+                    align="center"
+                    
+                    cellpadding="0"
+                    cellspacing="0"
+                    width="70%"
+                    style="border-collapse: collapse;"
+                  >
+                    <tr>
+                      <td align="center" width="80">&nbsp;</td>
+                      <%= if assigns[:linkedin] do %>
+                        <td class="social-link" align="center" >
+                          <a href="<%=@linkedin%>" class="linkedin" >
+                            Linkedin
+                          </a>
+                        </td>
+                      <% end %>
+                      <td align="center" width="10" class="seperator">&bull;</td>
+                      <%= if assigns[:twitter] do %>
+                        <td class="social-link" align="center" >
+                          <a href="<%= @twitter %>" class="twitter">
+                            Twitter
+                          </a>
+                        </td>
+                      <% end %>
+                      <td align="center" width="10" class="seperator">&bull;</td>
+                      <%= if assigns[:fb] do %>
+                        <td class="social-link" align="center" >
+                            <a href="<%=@fb%>" class="fb" >
+                              Facebook
+                            </a>
+                        </td>
+                      <% end %>
+                      <td align="center" width="10" class="seperator">&bull;</td>
+                      <%= if assigns[:yt] do %>
+                        <td class="social-link" align="center" >
+                          <a href="<%=@yt%>" class="yt" >
+                            Youtube
+                          </a>
+                        </td>
+                      <% end %>
+                      <td align="center" width="80">&nbsp;</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <% end %>
+
+              <tr>
+                <td class="footer-container" >
+                  <table 
+                    align="center"
+                    
+                    cellpadding="0"
+                    cellspacing="0"
+                    width="70%"
+                    style="border-collapse: collapse;"
+                  >
+                    <tr>
+                      <%= if assigns[:logo_footer_url] do %>
+                      <td>
+                        <img
+                          class="footer-image"
+                          width="80"
+                          src="<%= @logo_footer_url %>"
+                          alt=""
+                        />
+                      </td>
+                      <% end %>
+                      <%= if assigns[:p3] do %>
+                      <td align="center" class="footer">
+                        <%= raw(@p3) %>
+                      </td>
+                      <% end %>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </body>
+  </body>
+</html>

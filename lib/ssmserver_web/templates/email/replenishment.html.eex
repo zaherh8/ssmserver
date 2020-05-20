@@ -1,0 +1,16 @@
+<span class="user-title"><%= assigns[:title]%></span> <%= assigns[:last_name]%>
+<br/>
+<br/>
+<div class="paragraph1">
+Following our latest scan in our warehouse, We would like you to know that the product <span class="product"><%= assigns[:product_name]%> </span>
+is running below the acceptable limit. Thus the need of an order of this product with the following quantity: <span style="font-weight: bold;"><%= assigns[:new_quantity]%>.
+</div>
+<br/>
+<br/>
+<br/>
+<div class="paragraph1">
+Our staff will be waiting you for in our warehouse for any further information please contact us
+directly by mail via this email address <a href="mailto:hassanzaher11@.com">hassanzaher11@gmail.com</a>.
+</div>
+<br/>
+<br/>

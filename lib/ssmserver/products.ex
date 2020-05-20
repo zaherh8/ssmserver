@@ -21,6 +21,11 @@ defmodule Ssmserver.Products do
     Repo.all(Product)
   end
 
+  def list_available_products do
+    Repo.all(from p in Product,
+    where: p.quantity>0,
+    select: p)
+  end
   @doc """
   Gets a single product.
 
@@ -50,8 +55,10 @@ defmodule Ssmserver.Products do
 
   """
   def create_product(attrs \\ %{}) do
+    IO.inspect(attrs)
     %Product{}
     |> Product.changeset(attrs)
+    |>IO.inspect()
     |> Repo.insert()
   end
 
@@ -71,6 +78,13 @@ defmodule Ssmserver.Products do
     product
     |> Product.changeset(attrs)
     |> Repo.update()
+  end
+
+  def all_product_to_zero(_args) do
+    from(p in Product, select: p)
+    |> Repo.update_all(set: [quantity: 0])
+    |> IO.inspect
+    {:ok , "done"}
   end
 
   @doc """

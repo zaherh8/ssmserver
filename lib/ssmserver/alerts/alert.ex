@@ -6,7 +6,7 @@ defmodule Ssmserver.Alerts.Alert do
   schema "alerts" do
     field :category, :string
     field :condition, :string
-    field :product, :integer
+    field :product, :string
     field :quantity, :integer
     field :send, :string
 

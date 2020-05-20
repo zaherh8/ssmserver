@@ -23,8 +23,8 @@ defmodule SsmserverWeb.Schema do
 
     @desc "return a product"
     field :getproduct, type: :product do
-      arg(:id, non_null(:integer))
-      resolve(&ProductResolver.get_product/2)
+      arg(:barcode, non_null(:string))
+      resolve(&ProductResolver.get_product_by_barcode/2)
     end
 
     @desc "return a product by barcode"
@@ -65,12 +65,29 @@ defmodule SsmserverWeb.Schema do
       arg(:category, :string)
       arg(:price, :float)
       arg(:quantity, :integer)
+      arg(:supplier, :string)
       resolve(&ProductResolver.create_product/2)
     end
 
-    @desc "update a product"
-    field :updateproduct, type: :message do
+    @desc "update a list of products"
+    field :updateproducts, type: :message do
       arg(:products, non_null(list_of(:inputproduct)))
+      resolve(&ProductResolver.update_products/2)
+    end
+
+    @desc "update a product"
+    field :updateproduct, type: :product do
+      arg(:barcode, non_null(:string))
+      arg(:name, :string)
+      arg(:brand, :string)
+      arg(:lastordered, :string)
+      arg(:lastscan, :string)
+      arg(:prlocation, :string)
+      arg(:whlocation, :string)
+      arg(:category, :string)
+      arg(:price, :float)
+      arg(:quantity, :integer)
+      arg(:supplier, :string)
       resolve(&ProductResolver.update_product/2)
     end
 
@@ -100,9 +117,9 @@ defmodule SsmserverWeb.Schema do
       resolve(&UserResolver.update_user/2)
     end
 
-    @desc "create an alarm"
+    @desc "create an alert"
     field :createalert, type: :alert do
-      arg(:product, :integer)
+      arg(:product, :string)
       arg(:send, :string)
       arg(:quantity, :integer)
       arg(:condition, :string)
@@ -112,7 +129,7 @@ defmodule SsmserverWeb.Schema do
     @desc "update an alert"
     field :updatealert, type: :alert do
       arg(:id, non_null(:integer))
-      arg(:product, :integer)
+      arg(:product, :string)
       arg(:send, :string)
       arg(:quantity, :integer)
       arg(:condition, :string)
@@ -128,7 +145,7 @@ defmodule SsmserverWeb.Schema do
 
     @desc "create a replenishment"
     field :createreplenishment, type: :replenishment do
-      arg(:product, :integer)
+      arg(:product, :string)
       arg(:active, :boolean)
       arg(:quantity, :integer)
       arg(:condition, :string)
@@ -138,8 +155,8 @@ defmodule SsmserverWeb.Schema do
     end
     @desc "update a replenishment"
     field :updatereplenishment, type: :replenishment do
-      arg(:id, non_null(:integer))
-      arg(:product, :integer)
+      arg(:id, :integer)
+      arg(:product, :string)
       arg(:active, :boolean)
       arg(:quantity, :integer)
       arg(:condition, :string)

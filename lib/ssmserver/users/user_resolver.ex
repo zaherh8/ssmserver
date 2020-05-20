@@ -18,6 +18,9 @@ defmodule SsmserverWeb.UserResolver do
     {:ok, Users.get_user!(Map.get(args, :id))}
   end
 
+  def get_managers_emails do
+    {:ok, Users.get_managers_emails}
+  end
   def validate_user(args, _info) do
     user = Users.get_user(args)
 

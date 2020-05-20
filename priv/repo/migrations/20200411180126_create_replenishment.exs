@@ -6,7 +6,7 @@ defmodule Ssmserver.Repo.Migrations.CreateReplenishment do
       add :email, :string
       add :active, :boolean, default: false, null: false
       add :condition, :string
-      add :product, :integer
+      add :product, :string
       add :quantity, :integer
       add :quantitytoorder, :integer
       timestamps()

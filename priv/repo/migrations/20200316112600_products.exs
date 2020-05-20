@@ -2,8 +2,8 @@ defmodule Ssmserver.Repo.Migrations.Products do
   use Ecto.Migration
 
   def change do
-    create table(:products, prefix: "ssm") do
-      add :barcode, :string
+    create table(:products, primary_key: false, prefix: "ssm") do
+      add :barcode, :string, primary_key: true
       add :name, :string
       add :quantity, :integer
       add :price, :float
@@ -13,6 +13,7 @@ defmodule Ssmserver.Repo.Migrations.Products do
       add :lastordered, :string
       add :lastscan, :string
       add :category, :string
+      add :supplier, :string
       timestamps()
     end
   end

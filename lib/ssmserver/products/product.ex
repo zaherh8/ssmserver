@@ -1,6 +1,9 @@
 defmodule Ssmserver.Products.Product do
   use Ecto.Schema
   import Ecto.Changeset
+
+  @primary_key {:barcode, :string, []}
+  @derive {Phoenix.Param, key: :barcode}
   @schema_prefix "ssm"
   schema "products" do
     field :name, :string
@@ -11,8 +14,8 @@ defmodule Ssmserver.Products.Product do
     field :lastordered, :string
     field :whlocation, :string
     field :prlocation, :string
-    field :barcode, :string
     field :category, :string
+    field :supplier, :string
     timestamps()
   end
 
@@ -29,8 +32,8 @@ defmodule Ssmserver.Products.Product do
       :quantity,
       :lastscan,
       :lastordered,
-      :category
+      :category,
+      :supplier
     ])
-    |> validate_required([:barcode])
   end
 end

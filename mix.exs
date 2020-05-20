@@ -21,7 +21,7 @@ defmodule Ssmserver.MixProject do
 
     [
       mod: {Ssmserver.Application, []},
-      extra_applications: [:logger, :runtime_tools, :bamboo]
+      extra_applications: [:logger, :runtime_tools, :bamboo, :logger_file_backend]
     ]
   end
 
@@ -53,7 +53,8 @@ defmodule Ssmserver.MixProject do
       {:absinthe_phoenix, "~> 1.4"},
       {:httpoison, "~> 1.4.0"},
       {:poison, "~> 2.1", override: true},
-      {:cors_plug, "~> 1.5"}
+      {:cors_plug, "~> 1.5"},
+      {:logger_file_backend, "~> 0.0.10"}
     ]
   end
 

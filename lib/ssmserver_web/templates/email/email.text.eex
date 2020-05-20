@@ -1,0 +1,17 @@
+<%= if assigns[:title] do %>
+    <%= @title %>
+<% end %>
+
+<%= if assigns[:p1] do %>
+  <%= @p1 %>
+<% end %>
+
+
+<%= if assigns[:p2] do %>
+  <%= @p2 %>
+<% end %>
+
+
+<%= if assigns[:p3] do %>
+  <%= @p3 %>
+<% end %>

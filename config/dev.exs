@@ -10,19 +10,26 @@ config :ssmserver, Ssmserver.Repo,
   pool_size: 10
 
 config :ssmserver,
-  mailgun_domain: "https://api.mailgun.net/sandboxf094ee0f815c409c8412ca666f1d1ff7.mailgun.org",
-  mailgun_key: "pubkey-82c28a7a09f5f28672cfdafe21d20880"
+  ADAPTER: Bamboo.MailgunAdapter,
+  MAILGUN_DOMAIN: "sandboxf094ee0f815c409c8412ca666f1d1ff7.mailgun.org",
+  MAILGUN_API_KEY: "pubkey-82c28a7a09f5f28672cfdafe21d20880", #7c320e7c565f8a44af7eb48d33cb5a2f-f135b0f1-cb7a4694
+  BASE_URI: "https://api.mailgun.net/v3"
 
-config :ssmserver, Emailapp.Mailer,
-  adapter: Bamboo.SMTPAdapter,
-  server: "smtp.mailgun.com",
-  port: 587,
-  username: "brad@sandboxf094ee0f815c409c8412ca666f1d1ff7.mailgun.org",
-  password: "Zaher123h",
-  tls: :if_available, # can be `:always` or `:never`
- #":system", ALLOWED_TLS_VERSIONS"} w/ comma seprated values (e.g. "tlsv1.1,tlsv1.2")
-  ssl: false, # can be `true`
-  retries: 1
+  # config :my_app, MyApp.Mailer,
+  # adapter: Bamboo.MailgunAdapter,
+  # api_key: "my_api_key",
+  # domain: "your.domain",
+  # base_uri: "https://api.eu.mailgun.net/v3"
+# config :ssmserver, Emailapp.Mailer,
+#   adapter: Bamboo.SMTPAdapter,
+#   server: "smtp.mailgun.com",
+#   port: 587,
+#   username: "brad@sandboxf094ee0f815c409c8412ca666f1d1ff7.mailgun.org",
+#   password: "Zaher123h",
+#   tls: :if_available, # can be `:always` or `:never`
+#   #":system", ALLOWED_TLS_VERSIONS"} w/ comma seprated values (e.g. "tlsv1.1,tlsv1.2")
+#   ssl: false, # can be `true`
+#   retries: 1
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #
