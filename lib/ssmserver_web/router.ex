@@ -1,6 +1,6 @@
 defmodule SsmserverWeb.Router do
   use SsmserverWeb, :router
-
+  alias SsmserverWeb.FileController
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
@@ -14,22 +14,24 @@ defmodule SsmserverWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", SsmserverWeb do
+  scope "/"  do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/", FileController, :index
   end
- forward  "/sent_emails", Bamboo.SentEmailViewerPlug
+
+
   scope "/api" do
     # pipeline through which the request have to be routed
     pipe_through(:api)
-
+    resources("/log_file", FileController)
     forward "/graphiql",
             Absinthe.Plug.GraphiQL,
             schema: SsmserverWeb.Schema,
             interface: :simple
 
     forward("/", Absinthe.Plug, schema: SsmserverWeb.Schema)
+
   end
 
   # Other scopes may use custom stacks.

@@ -37,11 +37,15 @@ defmodule Ssmserver.Users do
   """
   def get_user!(id), do: Repo.get!(User, id)
   def get_user(params), do: Repo.get_by(User, params)
+
   def get_managers_emails do
-    Repo.all(from u in User,
-    where: u.role=="Manager",
-    select: u.email)
+    Repo.all(
+      from u in User,
+        where: u.role == "Manager",
+        select: u.email
+    )
   end
+
   @doc """
   Creates a user.
 

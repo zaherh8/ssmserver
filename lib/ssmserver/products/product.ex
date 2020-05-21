@@ -13,7 +13,7 @@ defmodule Ssmserver.Products.Product do
     field :lastscan, :string
     field :lastordered, :string
     field :whlocation, :string
-    field :prlocation, :string
+    field :prlocation, {:array, :string}
     field :category, :string
     field :supplier, :string
     timestamps()

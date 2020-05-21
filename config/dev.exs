@@ -9,17 +9,22 @@ config :ssmserver, Ssmserver.Repo,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
-config :ssmserver,
-  ADAPTER: Bamboo.MailgunAdapter,
-  MAILGUN_DOMAIN: "sandboxf094ee0f815c409c8412ca666f1d1ff7.mailgun.org",
-  MAILGUN_API_KEY: "pubkey-82c28a7a09f5f28672cfdafe21d20880", #7c320e7c565f8a44af7eb48d33cb5a2f-f135b0f1-cb7a4694
-  BASE_URI: "https://api.mailgun.net/v3"
+config :ssmserver, Ssmserver.Mailer,
+  adapter: Bamboo.MailgunAdapter,
+  domain: "sandbox900886a37f674ddda303955d5007e13f.mailgun.org",
+  api_key: "pubkey-d5a87825d423ea76a6f97eb118cb4238",
+  base_uri: "https://api.mailgun.net/v3"
 
-  # config :my_app, MyApp.Mailer,
-  # adapter: Bamboo.MailgunAdapter,
-  # api_key: "my_api_key",
-  # domain: "your.domain",
-  # base_uri: "https://api.eu.mailgun.net/v3"
+# config :ssmserver,
+#   domain: "sandboxf094ee0f815c409c8412ca666f1d1ff7.mailgun.org",
+#   mailgun_api_key: "pubkey-82c28a7a09f5f28672cfdafe21d20880", #7c320e7c565f8a44af7eb48d33cb5a2f-f135b0f1-cb7a4694
+#   base_uri: "https://api.mailgun.net/v3"
+
+# config :my_app, MyApp.Mailer,
+# adapter: Bamboo.MailgunAdapter,
+# api_key: "my_api_key",
+# domain: "your.domain",
+# base_uri: "https://api.eu.mailgun.net/v3"
 # config :ssmserver, Emailapp.Mailer,
 #   adapter: Bamboo.SMTPAdapter,
 #   server: "smtp.mailgun.com",

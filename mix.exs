@@ -18,7 +18,6 @@ defmodule Ssmserver.MixProject do
   #
   # Type `mix help compile.app` for more information.
   def application do
-
     [
       mod: {Ssmserver.Application, []},
       extra_applications: [:logger, :runtime_tools, :bamboo, :logger_file_backend]
@@ -33,7 +32,8 @@ defmodule Ssmserver.MixProject do
   #
   # Type `mix help deps` for examples and options.
   defp deps do
-    [ {:mailgun, "~> 0.1.2"},
+    [
+      {:mailgun, "~> 0.1.2"},
       {:bamboo, "~>0.8.0"},
       {:bamboo_smtp, "~> 1.4.0"},
       {:phoenix, "~> 1.4.11"},

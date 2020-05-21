@@ -3,10 +3,12 @@ defmodule SsmserverWeb.Types do
   This module is responsible for defining the types of objcts to be used in graphql schemas
   """
   use Absinthe.Schema.Notation
+
   input_object :inputproduct do
     field(:barcode, :string)
     field(:quantity, :integer)
-    field(:name,:string)
+    field(:name, :string)
+    field(:prlocation,  list_of(:string))
   end
 
   object :user do
@@ -28,7 +30,7 @@ defmodule SsmserverWeb.Types do
     field(:quantity, :integer)
     field(:price, :float)
     field(:whlocation, :string)
-    field(:prlocation, :string)
+    field(:prlocation,  list_of(:string))
     field(:lastordered, :string)
     field(:lastscanned, :string)
     field(:barcode, :string)

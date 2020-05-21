@@ -11,6 +11,12 @@ defmodule SsmserverWeb.Schema do
     field :products, type: list_of(:product) do
       resolve(&ProductResolver.get_products/2)
     end
+
+    @desc "return all available products"
+    field :available_products, type: list_of(:product) do
+      resolve(&ProductResolver.get_available_products/2)
+    end
+
     @desc "return all alerts"
     field :alerts, type: list_of(:alert) do
       resolve(&AlertResolver.get_alerts/2)
@@ -60,7 +66,7 @@ defmodule SsmserverWeb.Schema do
       arg(:brand, :string)
       arg(:lastordered, :string)
       arg(:lastscan, :string)
-      arg(:prlocation, :string)
+      arg(:prlocation,  list_of(:string))
       arg(:whlocation, :string)
       arg(:category, :string)
       arg(:price, :float)
@@ -82,7 +88,7 @@ defmodule SsmserverWeb.Schema do
       arg(:brand, :string)
       arg(:lastordered, :string)
       arg(:lastscan, :string)
-      arg(:prlocation, :string)
+      arg(:prlocation, list_of(:string))
       arg(:whlocation, :string)
       arg(:category, :string)
       arg(:price, :float)
@@ -126,6 +132,7 @@ defmodule SsmserverWeb.Schema do
       arg(:category, :string)
       resolve(&AlertResolver.create_alert/2)
     end
+
     @desc "update an alert"
     field :updatealert, type: :alert do
       arg(:id, non_null(:integer))
@@ -153,6 +160,7 @@ defmodule SsmserverWeb.Schema do
       arg(:quantitytoorder, :integer)
       resolve(&ReplenishmentResolver.create_replenishment/2)
     end
+
     @desc "update a replenishment"
     field :updatereplenishment, type: :replenishment do
       arg(:id, :integer)
@@ -170,6 +178,5 @@ defmodule SsmserverWeb.Schema do
       arg(:id, non_null(:integer))
       resolve(&ReplenishmentResolver.delete_replenishment/2)
     end
-
   end
 end

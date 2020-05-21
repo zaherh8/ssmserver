@@ -13,6 +13,7 @@ defmodule SsmserverWeb.ProductResolver do
   alias SsmserverWeb.ReplenishmentResolver
   alias SsmserverWeb.HistoryResolver
   require Logger
+
   def create_product(args, _info) do
     Products.create_product(args)
     {:ok, args}
@@ -20,9 +21,13 @@ defmodule SsmserverWeb.ProductResolver do
 
   def get_products(_args, _info) do
     products = Products.list_products()
+    |> Enum.map(fn product ->
+       Map.put(product, :prlocation, Enum.join(product.prlocation, ","))
+    end)
     {:ok, products}
   end
-  def get_availabke_products(_args, _info) do
+
+  def get_available_products(_args, _info) do
     products = Products.list_available_products()
     {:ok, products}
   end
@@ -41,86 +46,115 @@ defmodule SsmserverWeb.ProductResolver do
 
   def update_products(%{products: products}, _info) do
     Products.all_product_to_zero("")
-    IO.inspect("UPDATING")
+
     res =
-     case update_at_once(products) do
-      {:ok, _}->
-        {:ok, %{text: "all Products updated"}}
-      _->
-        {:error,%{text: "Something went wrong, please try again later."} }
+      case update_at_once(products) do
+        {:ok, _} ->
+          {:ok, %{text: "all Products updated"}}
+
+        _ ->
+          {:error, %{text: "Something went wrong, please try again later."}}
       end
-      begin_tasks(products)
+
+    begin_tasks(products)
     res
     # Products.update_product(Products.get_product!(Map.get(args, :barcode)), args)
   end
+
   def begin_tasks(new_products) do
     {:ok, products} = get_products("", "")
     task = Task.async(fn -> send_alerts(products) end)
     task2 = Task.async(fn -> send_replenishments(products) end)
     task3 = Task.async(fn -> update_history(new_products) end)
-    Task.yield_many([task,task2,task3], 5000)
+    Task.yield_many([task, task2, task3], 5000)
   end
+
   def update_history(products) do
     update_time =
-    DateTime.utc_now
-    |> DateTime.to_string()
+      DateTime.utc_now()
+      |> DateTime.to_string()
 
-    Enum.each(products, fn prod->
-      HistoryResolver.create_history(%{product: prod.barcode, date: update_time, quantity: prod.quantity}, "")
+    Enum.each(products, fn prod ->
+      HistoryResolver.create_history(
+        %{product: prod.barcode, date: update_time, quantity: prod.quantity},
+        ""
+      )
     end)
   end
+
   def send_replenishments(products) do
+    time =
+      DateTime.utc_now()
+      |> DateTime.to_string()
+
     {:ok, replenishments} = ReplenishmentResolver.get_replenishments("", "")
+
     replenishments
     |> Enum.each(fn rep ->
-      Enum.each(products, fn product->
+      Enum.each(products, fn product ->
         if product.barcode == rep.product &&
-        (
-          (rep.condition == "Less Than" && rep.quantity>product.quantity)
-          || (rep.condition == "more Than" && rep.quantity<product.quantity)
-        ) do
-            ReplenishmentResolver.update_replenishment_state(rep, %{active: true})
-            Email.rep_email(rep.email, product.name, rep.quantitytoorder)
-            |> Mailer.deliver_later()
-            Logger.warn("A replenishment of the following product '#{product.name}' to #{rep.email}")
+             ((rep.condition == "Less Than" && rep.quantity > product.quantity) ||
+                (rep.condition == "more Than" && rep.quantity < product.quantity)) &&
+             not rep.active do
+          update_product(%{lastordered: time, barcode: product.barcode}, "")
+          ReplenishmentResolver.update_replenishment_state(rep, %{active: true})
+
+          Email.rep_email(rep.email, product.name, rep.quantitytoorder)
+          |> Mailer.deliver_later()
+
+          Logger.warn(
+            "A replenishment of the following product '#{product.name}' to #{rep.email}"
+          )
         end
       end)
     end)
-
   end
-  def send_alerts(products) do
-    #get all alerts a process /replenishments another process
-    {:ok, alerts} = AlertResolver.get_alerts("", "")
-    #get all products with quantity different than zero (to be added)
 
-    {:ok, managers_emails} = UserResolver.get_managers_emails
+  def send_alerts(products) do
+    # get all alerts a process /replenishments another process
+    {:ok, alerts} = AlertResolver.get_alerts("", "")
+    # get all products with quantity different than zero (to be added)
+
+    {:ok, managers_emails} = UserResolver.get_managers_emails()
+
     alerts
     |> Enum.each(fn alert ->
-      Enum.each(products, fn product->
+      Enum.each(products, fn product ->
         if product.barcode == alert.product &&
-        (
-          (alert.condition == "Less Than" && alert.quantity>product.quantity)
-          || (alert.condition == "more Than" && alert.quantity<product.quantity)
-        ) do
-            Email.alert_email(managers_emails, product.name)
-            |> Mailer.deliver_later()
-            Logger.warn("A low stock inventory alert of the following product '#{product.name}' was sent to all managers")
+             ((alert.condition == "Less Than" && alert.quantity > product.quantity) ||
+                (alert.condition == "more Than" && alert.quantity < product.quantity)) do
+          Email.alert_email(managers_emails, product.name)
+          |> Mailer.deliver_later()
+
+          Logger.warn(
+            "A low stock inventory alert of the following product '#{product.name}' was sent to all managers"
+          )
         end
       end)
     end)
-    #for every new product parse the list of alerts and check the condition  if conditiond satisfied send an alert/replenishment
+
+    # for every new product parse the list of alerts and check the condition  if conditiond satisfied send an alert/replenishment
   end
+
   def update_at_once(args) do
-    IO.inspect(args, label: "args")
+    update_time =
+      DateTime.utc_now()
+      |> DateTime.to_string()
+
     Enum.reduce(args, Multi.new(), fn updated_product, multi ->
+      updated_product =
+        updated_product
+        |> Map.put(:lastscan, update_time)
+
       Multi.update(
         multi,
         {:product, updated_product.barcode},
-        IO.inspect(Product.changeset(Products.get_product!(updated_product.barcode), updated_product))
+        Product.changeset(Products.get_product!(updated_product.barcode), updated_product)
       )
     end)
-    |>Repo.transaction()
+    |> Repo.transaction()
   end
+
   def update_product(args, _info) do
     Products.update_product(Products.get_product!(Map.get(args, :barcode)), args)
   end

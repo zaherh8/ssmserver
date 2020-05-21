@@ -13,9 +13,11 @@ defmodule SsmserverWeb.ReplenishmentResolver do
     replenishments = Replenishments.list_replenishment()
     {:ok, replenishments}
   end
-  def update_replenishment_state(replenishment, args)do
-    Replenishments.update_replenishment(replenishment , args)
+
+  def update_replenishment_state(replenishment, args) do
+    Replenishments.update_replenishment(replenishment, args)
   end
+
   def get_replenishment(args, _info) do
     {:ok, Replenishments.get_replenishment!(Map.get(args, :id))}
   end
@@ -25,6 +27,9 @@ defmodule SsmserverWeb.ReplenishmentResolver do
   end
 
   def update_replenishment(args, _info) do
-    Replenishments.update_replenishment(Replenishments.get_replenishment!(Map.get(args, :id)), args)
+    Replenishments.update_replenishment(
+      Replenishments.get_replenishment!(Map.get(args, :id)),
+      args
+    )
   end
 end

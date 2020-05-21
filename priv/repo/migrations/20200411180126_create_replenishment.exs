@@ -11,6 +11,5 @@ defmodule Ssmserver.Repo.Migrations.CreateReplenishment do
       add :quantitytoorder, :integer
       timestamps()
     end
-
   end
 end

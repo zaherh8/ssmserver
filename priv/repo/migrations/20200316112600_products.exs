@@ -8,7 +8,7 @@ defmodule Ssmserver.Repo.Migrations.Products do
       add :quantity, :integer
       add :price, :float
       add :whlocation, :string
-      add :prlocation, :string
+      add :prlocation, {:array, :string}
       add :brand, :string
       add :lastordered, :string
       add :lastscan, :string

@@ -19,11 +19,6 @@ config :ssmserver, Ssmserver.Repo,
   show_sensitive_data_on_connection_error: true,
   pool_size: 100
 
-config :ssmserver, Ssmserver.Mailer,
-  adapter: Bamboo.MailgunAdapter,
-  domain: "sandboxf094ee0f815c409c8412ca666f1d1ff7.mailgun.org",
-  api_key: "7c320e7c565f8a44af7eb48d33cb5a2f-f135b0f1-cb7a4694",
-  base_uri: "https://api.mailgun.net/v3"
 # Configures the endpoint
 config :ssmserver, SsmserverWeb.Endpoint,
   url: [host: "localhost"],
@@ -35,16 +30,14 @@ config :ssmserver, SsmserverWeb.Endpoint,
 config :logger,
   backends: [{LoggerFileBackend, :warn}],
   compile_time_purge_matching: [
-              [level_lower_than: :warn]
-            ]
-
+    [level_lower_than: :warn]
+  ]
 
 config :logger, :warn,
   format: "$time $message\n",
   metadata: [:request_id],
   path: "./log_file.log",
   level: :warn
-
 
 # config :ssmserver, Ssmserver.Mailer,
 #   adapter: Bamboo.LocalAdapter
