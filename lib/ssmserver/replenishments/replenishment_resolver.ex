@@ -22,6 +22,9 @@ defmodule SsmserverWeb.ReplenishmentResolver do
     {:ok, Replenishments.get_replenishment!(Map.get(args, :id))}
   end
 
+  def get_active_orders(_args, _info) do
+    {:ok, %{total: Replenishments.get_active_orders()}}
+  end
   def delete_replenishment(args, _info) do
     Replenishments.delete_replenishment(Replenishments.get_replenishment!(Map.get(args, :id)))
   end

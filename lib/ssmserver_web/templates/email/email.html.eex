@@ -294,11 +294,13 @@
       }
 
       .icon-image {
-        margin: 15px 0;
+        margin: 10px 0;
         display: inline-block;
         vertical-align: middle;
       }
-      
+      .image{
+        width:80px;
+      }
       .icon-image img {
         width: 100%;
         height: auto;
@@ -329,12 +331,12 @@
               <%= if assigns[:logo_url] do %>
                 <tr>
                   <td class="logo">
-                    <img src="<%= @logo_url %>?tk53st" alt="" />
+                    <img src="<%= @logo_url %>?tk53st" alt="" class="image"/>
                   </td>
                 </tr>
               <% end %>
               <tr>
-                <td style="font-size: 0; line-height: 0;" height="50">&nbsp;</td>
+                <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
               </tr>
               <%= if assigns[:title] do %>
                 <tr >
@@ -392,7 +394,7 @@
               <tr>
 
                 <td class="social-media-title" align="center" >
-                  Suivez-nous sur
+                 Follow Us on
                 </td>
               </tr>
               <tr>

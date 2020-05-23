@@ -21,6 +21,9 @@ defmodule SsmserverWeb.HistoryResolver do
     Histories.delete_history(Histories.get_history!(Map.get(args, :id)))
   end
 
+  def get_scans_total(_args,_info) do
+   {:ok, %{total: Histories.get_total_scans()}}
+  end
   def update_history(args, _info) do
     Histories.update_history(Histories.get_history!(Map.get(args, :id)), args)
   end

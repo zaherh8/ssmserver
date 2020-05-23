@@ -29,7 +29,18 @@ defmodule SsmserverWeb.ProductResolver do
 
   def get_available_products(_args, _info) do
     products = Products.list_available_products()
+    |> Enum.map(fn product ->
+      Map.put(product, :prlocation, Enum.join(product.prlocation, ","))
+    end)
     {:ok, products}
+  end
+
+  def get_products_total(_args, _info) do
+    {:ok, %{total: Products.get_products_total()}}
+  end
+
+  def get_brands_total(_args, _info) do
+    {:ok, %{total: Products.get_brands_total()}}
   end
 
   def get_product(args, _info) do
@@ -59,6 +70,13 @@ defmodule SsmserverWeb.ProductResolver do
     begin_tasks(products)
     res
     # Products.update_product(Products.get_product!(Map.get(args, :barcode)), args)
+  end
+
+  def top_five_products(_args, _info) do
+    {:ok,
+    Products.get_products_sorted()
+    |> Enum.take(5)
+    }
   end
 
   def begin_tasks(new_products) do

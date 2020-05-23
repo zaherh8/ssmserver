@@ -13,7 +13,12 @@ defmodule Ssmserver.Email do
       p1:
         SsmserverWeb.EmailView.safe_render("alert.html",
           product_name: product_name
-        )
+        ),
+      yt: "",
+      linkedin: "" ,
+      fb: "" ,
+      twitter: "",
+      logo_url: "https://github.com/zaherh8/fyp/blob/master/mail.png?raw=true"
     )
   end
 

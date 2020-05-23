@@ -47,6 +47,10 @@ defmodule SsmserverWeb.Types do
     field(:condition, :string)
   end
 
+  object :total do
+    field(:total, :integer)
+  end
+
   object :replenishment do
     field(:id, :integer)
     field(:product, :integer)

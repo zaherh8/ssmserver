@@ -1,15 +1,41 @@
 defmodule SsmserverWeb.Schema do
   use Absinthe.Schema
   alias SsmserverWeb.AlertResolver
-  alias SsmserverWeb.UserResolver
+  alias SsmserverWeb.HistoryResolver
   alias SsmserverWeb.ProductResolver
   alias SsmserverWeb.ReplenishmentResolver
+  alias SsmserverWeb.UserResolver
+
   import_types(SsmserverWeb.Types)
 
   query do
     @desc "return all products"
     field :products, type: list_of(:product) do
       resolve(&ProductResolver.get_products/2)
+    end
+
+    @desc "return top 5 products"
+    field :top_five_products, type: list_of(:product) do
+      resolve(&ProductResolver.top_five_products/2)
+    end
+
+    @desc "return total products quantity"
+    field :products_quantity, type: :total do
+      resolve(&ProductResolver.get_products_total/2)
+    end
+    @desc "return total active orders"
+    field :active_orders, type: :total do
+      resolve(&ReplenishmentResolver.get_active_orders/2)
+    end
+
+    @desc "return total brands quantity"
+    field :brands_quantity, type: :total do
+      resolve(&ProductResolver.get_brands_total/2)
+    end
+
+    @desc "return total brands quantity"
+    field :scans_quantity, type: :total do
+      resolve(&HistoryResolver.get_scans_total/2)
     end
 
     @desc "return all available products"

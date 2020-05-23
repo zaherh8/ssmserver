@@ -101,4 +101,10 @@ defmodule Ssmserver.Replenishments do
   def change_replenishment(%Replenishment{} = replenishment) do
     Replenishment.changeset(replenishment, %{})
   end
+
+  def get_active_orders() do
+    Repo.one(
+      from r in Replenishment, select: count(r.id), where: r.active==true
+    )
+  end
 end

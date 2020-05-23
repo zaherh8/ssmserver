@@ -6,7 +6,6 @@ defmodule SsmserverWeb.FileController do
   end
   @spec send_file(Plug.Conn.t(), any) :: Plug.Conn.t()
   def send_file(conn, _params) do
-    IO.inspect("############3")
     conn =
       conn
       |> put_resp_content_type("text/csv")

@@ -11,8 +11,8 @@ config :ssmserver, Ssmserver.Repo,
 
 config :ssmserver, Ssmserver.Mailer,
   adapter: Bamboo.MailgunAdapter,
-  domain: "sandbox900886a37f674ddda303955d5007e13f.mailgun.org",
-  api_key: "pubkey-d5a87825d423ea76a6f97eb118cb4238",
+  domain: "sandboxf094ee0f815c409c8412ca666f1d1ff7.mailgun.org",
+  api_key: "key-654805cea4ad9871aeca247b5745913c",
   base_uri: "https://api.mailgun.net/v3"
 
 # config :ssmserver,

@@ -101,4 +101,10 @@ defmodule Ssmserver.Histories do
   def change_history(%History{} = history) do
     History.changeset(history, %{})
   end
+
+  def get_total_scans do
+    Enum.count(Repo.all(
+      from h in History, distinct: (h.date)
+    ))
+  end
 end

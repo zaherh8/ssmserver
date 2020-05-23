@@ -29,6 +29,19 @@ defmodule Ssmserver.Products do
     )
   end
 
+  def get_products_total do
+    Repo.one(from p in Product, select: sum(p.quantity))
+  end
+
+  def get_brands_total do
+    Repo.one(from p in Product, select: count(p.barcode))
+  end
+
+  def get_products_sorted do
+    Repo.all(from p in Product, select: p, order_by: [desc: :quantity])
+  end
+
+
   @doc """
   Gets a single product.
 

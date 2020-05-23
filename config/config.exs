@@ -19,6 +19,9 @@ config :ssmserver, Ssmserver.Repo,
   show_sensitive_data_on_connection_error: true,
   pool_size: 100
 
+  # tls: :if_available, # can be `:always` or `:never`
+  # ssl: false, # can be `true`
+  # retries: 1
 # Configures the endpoint
 config :ssmserver, SsmserverWeb.Endpoint,
   url: [host: "localhost"],
