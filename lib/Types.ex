@@ -11,6 +11,13 @@ defmodule SsmserverWeb.Types do
     field(:prlocation,  list_of(:string))
   end
 
+  object :history do
+    field(:date, :string)
+    field(:name, :string)
+    field(:product, :string)
+    field(:quantity, :integer)
+  end
+
   object :user do
     field(:username, :string)
     field(:role, :string)

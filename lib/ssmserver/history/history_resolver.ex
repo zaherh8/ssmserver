@@ -3,13 +3,24 @@ defmodule SsmserverWeb.HistoryResolver do
   This module is responsible for history management
   """
   alias Ssmserver.Histories
-
+  alias SsmserverWeb.ProductResolver
   def create_history(args, _info) do
     Histories.create_history(args)
   end
 
   def get_history_list(_args, _info) do
+    {:ok, products} = ProductResolver.get_products("","")
+
     historys = Histories.list_histories()
+    |> Enum.map(fn hist ->
+      hist = case Enum.find(products, fn prod ->
+        prod.barcode == hist.product
+      end) do
+       product -> Map.put(hist, :name, product.name)
+      end
+
+    end)
+    |>IO.inspect()
     {:ok, historys}
   end
 

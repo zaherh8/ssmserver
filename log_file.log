@@ -1,106 +1,14 @@
-salemeh
-salemeh 1
-salemeh 2
-salemeh 3
-salemeh 13
-jerome
-jerom1
-jerom3
-jerom3 
-asdjh   
-asdj2
-hasd
-i31qdonc
-aihsdlknzv
-as;dkhoih1e 
-a;skdh[1j
-knadsk1
-jalsdj124a
-a;sdh[1i2hd
-;akhs;l2
-;zlkchioqe
-;ndfihn
-'klsd;kasf
-;lakhnciahsnd
-lkjzbxc;mzxnc
-almdsb;aihsdlknzv15:16:28.855 Phoenix is unable to create symlinks. Phoenix' code reloader will run considerably faster if symlinks are allowed. On Windows, the lack of symlinks may even cause empty assets to be served. Luckily, you can address this issue by starting your Windows terminal at least once with "Run as Administrator" and then running your Phoenix application.
-15:17:50.429 Phoenix is unable to create symlinks. Phoenix' code reloader will run considerably faster if symlinks are allowed. On Windows, the lack of symlinks may even cause empty assets to be served. Luckily, you can address this issue by starting your Windows terminal at least once with "Run as Administrator" and then running your Phoenix application.
-19:40:49.591 #PID<0.1171.0> running SsmserverWeb.Endpoint (connection #PID<0.1170.0>, stream id 1) terminated
+21:41:51.313 #PID<0.2701.0> running SsmserverWeb.Endpoint (connection #PID<0.2700.0>, stream id 1) terminated
 Server: localhost:4000 (http)
 Request: POST /api/graphiql
 ** (exit) an exception was raised:
-    ** (BadMapError) expected a map, got: 40
-        (elixir) lib/map.ex:437: Map.get(40, :total, nil)
-        (absinthe) lib/absinthe/middleware/map_get.ex:9: Absinthe.Middleware.MapGet.call/2
-        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:209: Absinthe.Phase.Document.Execution.Resolution.reduce_resolution/1
-        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:168: Absinthe.Phase.Document.Execution.Resolution.do_resolve_field/4
-        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:153: Absinthe.Phase.Document.Execution.Resolution.do_resolve_fields/6
-        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:72: Absinthe.Phase.Document.Execution.Resolution.walk_result/5
-        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:257: Absinthe.Phase.Document.Execution.Resolution.build_result/4
-        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:153: Absinthe.Phase.Document.Execution.Resolution.do_resolve_fields/6
-        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:72: Absinthe.Phase.Document.Execution.Resolution.walk_result/5
-        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:53: Absinthe.Phase.Document.Execution.Resolution.perform_resolution/3
-        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:24: Absinthe.Phase.Document.Execution.Resolution.resolve_current/3
-        (absinthe) lib/absinthe/pipeline.ex:274: Absinthe.Pipeline.run_phase/3
-        (absinthe_plug) lib/absinthe/plug.ex:421: Absinthe.Plug.run_query/4
-        (absinthe_plug) lib/absinthe/plug.ex:247: Absinthe.Plug.call/2
-        (phoenix) lib/phoenix/router/route.ex:41: Phoenix.Router.Route.call/2
-        (phoenix) lib/phoenix/router.ex:288: Phoenix.Router.__call__/2
-        (ssmserver) lib/ssmserver_web/endpoint.ex:1: SsmserverWeb.Endpoint.plug_builder_call/2
-        (ssmserver) lib/plug/debugger.ex:132: SsmserverWeb.Endpoint."call (overridable 3)"/2
-        (ssmserver) lib/ssmserver_web/endpoint.ex:1: SsmserverWeb.Endpoint.call/2
-        (phoenix) lib/phoenix/endpoint/cowboy2_handler.ex:42: Phoenix.Endpoint.Cowboy2Handler.init/4
-20:41:31.571 A low stock inventory alert of the following product 'Milk' was sent to all managers
-11:55:42.941 Phoenix is unable to create symlinks. Phoenix' code reloader will run considerably faster if symlinks are allowed. On Windows, the lack of symlinks may even cause empty assets to be served. Luckily, you can address this issue by starting your Windows terminal at least once with "Run as Administrator" and then running your Phoenix application.
-11:58:17.854 Task #PID<0.540.0> started from #PID<0.504.0> terminating
-** (Bamboo.MailgunAdapter.ApiError) :nxdomain
-    (bamboo) lib/bamboo/adapters/mailgun_adapter.ex:60: Bamboo.MailgunAdapter.deliver/2
-    (elixir) lib/task/supervised.ex:90: Task.Supervised.invoke_mfa/2
-    (stdlib) proc_lib.erl:249: :proc_lib.init_p_do_apply/3
-Function: #Function<0.51449392/0 in Bamboo.TaskSupervisorStrategy.deliver_later/3>
-    Args: []
-12:03:31.156 Phoenix is unable to create symlinks. Phoenix' code reloader will run considerably faster if symlinks are allowed. On Windows, the lack of symlinks may even cause empty assets to be served. Luckily, you can address this issue by starting your Windows terminal at least once with "Run as Administrator" and then running your Phoenix application.
-12:09:23.095 Phoenix is unable to create symlinks. Phoenix' code reloader will run considerably faster if symlinks are allowed. On Windows, the lack of symlinks may even cause empty assets to be served. Luckily, you can address this issue by starting your Windows terminal at least once with "Run as Administrator" and then running your Phoenix application.
-12:09:42.039 Phoenix is unable to create symlinks. Phoenix' code reloader will run considerably faster if symlinks are allowed. On Windows, the lack of symlinks may even cause empty assets to be served. Luckily, you can address this issue by starting your Windows terminal at least once with "Run as Administrator" and then running your Phoenix application.
-12:12:55.212 Phoenix is unable to create symlinks. Phoenix' code reloader will run considerably faster if symlinks are allowed. On Windows, the lack of symlinks may even cause empty assets to be served. Luckily, you can address this issue by starting your Windows terminal at least once with "Run as Administrator" and then running your Phoenix application.
-12:16:27.231 Phoenix is unable to create symlinks. Phoenix' code reloader will run considerably faster if symlinks are allowed. On Windows, the lack of symlinks may even cause empty assets to be served. Luckily, you can address this issue by starting your Windows terminal at least once with "Run as Administrator" and then running your Phoenix application.
-12:19:59.603 Phoenix is unable to create symlinks. Phoenix' code reloader will run considerably faster if symlinks are allowed. On Windows, the lack of symlinks may even cause empty assets to be served. Luckily, you can address this issue by starting your Windows terminal at least once with "Run as Administrator" and then running your Phoenix application.
-12:24:09.571 Phoenix is unable to create symlinks. Phoenix' code reloader will run considerably faster if symlinks are allowed. On Windows, the lack of symlinks may even cause empty assets to be served. Luckily, you can address this issue by starting your Windows terminal at least once with "Run as Administrator" and then running your Phoenix application.
-12:26:32.058 Phoenix is unable to create symlinks. Phoenix' code reloader will run considerably faster if symlinks are allowed. On Windows, the lack of symlinks may even cause empty assets to be served. Luckily, you can address this issue by starting your Windows terminal at least once with "Run as Administrator" and then running your Phoenix application.
-12:30:22.513 Phoenix is unable to create symlinks. Phoenix' code reloader will run considerably faster if symlinks are allowed. On Windows, the lack of symlinks may even cause empty assets to be served. Luckily, you can address this issue by starting your Windows terminal at least once with "Run as Administrator" and then running your Phoenix application.
-12:38:31.332 Phoenix is unable to create symlinks. Phoenix' code reloader will run considerably faster if symlinks are allowed. On Windows, the lack of symlinks may even cause empty assets to be served. Luckily, you can address this issue by starting your Windows terminal at least once with "Run as Administrator" and then running your Phoenix application.
-12:41:04.659 Phoenix is unable to create symlinks. Phoenix' code reloader will run considerably faster if symlinks are allowed. On Windows, the lack of symlinks may even cause empty assets to be served. Luckily, you can address this issue by starting your Windows terminal at least once with "Run as Administrator" and then running your Phoenix application.
-12:42:12.235 Phoenix is unable to create symlinks. Phoenix' code reloader will run considerably faster if symlinks are allowed. On Windows, the lack of symlinks may even cause empty assets to be served. Luckily, you can address this issue by starting your Windows terminal at least once with "Run as Administrator" and then running your Phoenix application.
-12:42:43.797 Phoenix is unable to create symlinks. Phoenix' code reloader will run considerably faster if symlinks are allowed. On Windows, the lack of symlinks may even cause empty assets to be served. Luckily, you can address this issue by starting your Windows terminal at least once with "Run as Administrator" and then running your Phoenix application.
-12:44:27.982 Phoenix is unable to create symlinks. Phoenix' code reloader will run considerably faster if symlinks are allowed. On Windows, the lack of symlinks may even cause empty assets to be served. Luckily, you can address this issue by starting your Windows terminal at least once with "Run as Administrator" and then running your Phoenix application.
-12:46:46.492 Phoenix is unable to create symlinks. Phoenix' code reloader will run considerably faster if symlinks are allowed. On Windows, the lack of symlinks may even cause empty assets to be served. Luckily, you can address this issue by starting your Windows terminal at least once with "Run as Administrator" and then running your Phoenix application.
-17:02:57.165 #PID<0.1788.0> running SsmserverWeb.Endpoint (connection #PID<0.1787.0>, stream id 1) terminated
-Server: localhost:4000 (http)
-Request: POST /api/graphiql
-** (exit) an exception was raised:
-    ** (UndefinedFunctionError) function SsmserverWeb.ProductResolver.top_five_products/2 is undefined or private
-        (ssmserver) SsmserverWeb.ProductResolver.top_five_products(%{}, #Absinthe.Resolution<[acc: %{Absinthe.Middleware.Async => false, Absinthe.Middleware.Batch => %{input: [], output: %{}}}, adapter: Absinthe.Adapter.LanguageConventions, arguments: %{}, context: %{__absinthe_plug__: %{uploads: %{}}, pubsub: SsmserverWeb.Endpoint}, definition: %Absinthe.Blueprint.Document.Field{alias: nil, argument_data: %{}, arguments: [], complexity: nil, directives: [], errors: [], flags: %{}, name: "topFiveProducts", schema_node: %Absinthe.Type.Field{__private__: [], __reference__: %{identifier: :top_five_products, location: %{file: "c:/Users/User/Desktop/ssmserver/lib/Schema.ex", line: 18}, module: SsmserverWeb.Schema}, args: %{}, complexity: nil, config: nil, default_value: nil, deprecation: nil, description: "return top 5 products", identifier: :top_five_products, middleware: [{{Absinthe.Resolution, :call}, &SsmserverWeb.ProductResolver.top_five_products/2}], name: "top_five_products", triggers: [], type: %Absinthe.Type.List{of_type: :product}}, selections: [%Absinthe.Blueprint.Document.Field{alias: nil, argument_data: %{}, arguments: [], complexity: nil, directives: [], errors: [], flags: %{}, name: "barcode", schema_node: %Absinthe.Type.Field{__private__: [], __reference__: %{identifier: :barcode, location: %{file: "c:/Users/User/Desktop/ssmserver/lib/Types.ex", line: 36}, module: SsmserverWeb.Types}, args: %{}, complexity: nil, config: nil, default_value: nil, deprecation: nil, description: nil, identifier: :barcode, middleware: [{Absinthe.Middleware.MapGet, :barcode}], name: "barcode", triggers: [], type: :string}, selections: [], source_location: %Absinthe.Blueprint.Document.SourceLocation{column: nil, line: 2}, type_conditions: []}, %Absinthe.Blueprint.Document.Field{alias: nil, argument_data: %{}, arguments: [], complexity: nil, directives: [], errors: [], flags: %{}, name: "quantity", schema_node: %Absinthe.Type.Field{__private__: [], __reference__: %{identifier: :quantity, location: %{file: "c:/Users/User/Desktop/ssmserver/lib/Types.ex", line: 30}, module: SsmserverWeb.Types}, args: %{}, complexity: nil, config: nil, default_value: nil, deprecation: nil, description: nil, identifier: :quantity, middleware: [{Absinthe.Middleware.MapGet, :quantity}], name: "quantity", triggers: [], type: :integer}, selections: [], source_location: %Absinthe.Blueprint.Document.SourceLocation{column: nil, line: 3}, type_conditions: []}, %Absinthe.Blueprint.Document.Field{alias: nil, argument_data: %{}, arguments: [], complexity: nil, directives: [], errors: [], flags: %{}, name: "name", schema_node: %Absinthe.Type.Field{__private__: [], __reference__: %{identifier: :name, location: %{file: "c:/Users/User/Desktop/ssmserver/lib/Types.ex", line: 28}, module: SsmserverWeb.Types}, args: %{}, complexity: nil, config: nil, default_value: nil, deprecation: nil, description: nil, identifier: :name, middleware: [{Absinthe.Middleware.MapGet, :name}], name: "name", triggers: [], type: :string}, selections: [], source_location: %Absinthe.Blueprint.Document.SourceLocation{column: nil, line: 4}, type_conditions: []}], source_location: %Absinthe.Blueprint.Document.SourceLocation{column: nil, line: 1}, type_conditions: []}, errors: [], extensions: %{}, fields_cache: "#fieldscache<...>", fragments: %{}, middleware: [], parent_type: %Absinthe.Type.Object{__private__: [], __reference__: %{identifier: :query, location: %{file: "c:/Users/User/Desktop/ssmserver/lib/Schema.ex", line: 11}, module: SsmserverWeb.Schema}, description: nil, field_imports: [], fields: %{active_orders: %Absinthe.Type.Field{__private__: [], __reference__: %{identifier: :active_orders, location: %{file: "c:/Users/User/Desktop/ssmserver/lib/Schema.ex", line: 27}, module: SsmserverWeb.Schema}, args: %{}, complexity: nil, config: nil, default_value: nil, deprecation: nil, description: "return total active orders", identifier: :active_orders, middleware: [{{Absinthe.Resolution, :call}, &SsmserverWeb.ReplenishmentResolver.get_active_orders/2}], name: "active_orders", triggers: [], type: :total}, alerts: %Absinthe.Type.Field{__private__: [], __reference__: %{identifier: :alerts, location: %{file: "c:/Users/User/Desktop/ssmserver/lib/Schema.ex", line: 47}, module: SsmserverWeb.Schema}, args: %{}, complexity: nil, config: nil, default_value: nil, deprecation: nil, description: "return all alerts", identifier: :alerts, middleware: [{{Absinthe.Resolution, :call}, &SsmserverWeb.AlertResolver.get_alerts/2}], name: "alerts", triggers: [], type: %Absinthe.Type.List{of_type: :alert}}, available_products: %Absinthe.Type.Field{__private__: [], __reference__: %{identifier: :available_products, location: %{file: "c:/Users/User/Desktop/ssmserver/lib/Schema.ex", line: 42}, module: SsmserverWeb.Schema}, args: %{}, complexity: nil, config: nil, default_value: nil, deprecation: nil, description: "return all available products", identifier: :available_products, middleware: [{{Absinthe.Resolution, :call}, &SsmserverWeb.ProductResolver.get_available_products/2}], name: "available_products", triggers: [], type: %Absinthe.Type.List{of_type: :product}}, brands_quantity: %Absinthe.Type.Field{__private__: [], __reference__: %{identifier: :brands_quantity, location: %{file: "c:/Users/User/Desktop/ssmserver/lib/Schema.ex", line: 32}, module: SsmserverWeb.Schema}, args: %{}, complexity: nil, config: nil, default_value: nil, deprecation: nil, description: "return total brands quantity", identifier: :brands_quantity, middleware: [{{Absinthe.Resolution, :call}, &SsmserverWeb.ProductResolver.get_brands_total/2}], name: "brands_quantity", triggers: [], type: :total}, getproduct: %Absinthe.Type.Field{__private__: [], __reference__: %{identifier: :getproduct, location: %{file: "c:/Users/User/Desktop/ssmserver/lib/Schema.ex", line: 57}, module: SsmserverWeb.Schema}, args: %{barcode: %Absinthe.Type.Argument{__reference__: %{identifier: :barcode, location: %{file: "c:/Users/User/Desktop/ssmserver/lib/Schema.ex", line: 58}, module: SsmserverWeb.Schema}, default_value: nil, deprecation: nil, description: nil, name: "barcode", type: %Absinthe.Type.NonNull{of_type: :string}}}, complexity: nil, config: nil, default_value: nil, deprecation: nil, description: "return a product", identifier: :getproduct, middleware: [{{Absinthe.Resolution, :call}, &SsmserverWeb.ProductResolver.get_product_by_barcode/2}], name: "getproduct", triggers: [], type: :product}, getproductbybarcode: %Absinthe.Type.Field{__private__: [], __reference__: %{identifier: :getproductbybarcode, location: %{file: "c:/Users/User/Desktop/ssmserver/lib/Schema.ex", line: 63}, module: SsmserverWeb.Schema}, args: %{barcode: %Absinthe.Type.Argument{__reference__: %{identifier: :barcode, location: %{file: "c:/Users/User/Desktop/ssmserver/lib/Schema.ex", line: 64}, module: SsmserverWeb.Schema}, default_value: nil, deprecation: nil, description: nil, name: "barcode", type: %Absinthe.Type.NonNull{of_type: :string}}}, complexity: nil, config: nil, default_value: nil, deprecation: nil, description: "return a product by barcode", identifier: :getproductbybarcode, middleware: [{{Absinthe.Resolution, :call}, &SsmserverWeb.ProductResolver.get_product_by_barcode/2}], name: "getproductbybarcode", triggers: [], type: :product}, getuser: %Absinthe.Type.Field{__private__: [], __reference__: %{identifier: :getuser, location: %{file: "c:/Users/User/Desktop/ssmserver/lib/Schema.ex", line: 74}, module: SsmserverWeb.Schema}, args: %{id: %Absinthe.Type.Argument{__reference__: %{identifier: :id, location: %{file: "c:/Users/User/Desktop/ssmserver/lib/Schema.ex", line: 75}, module: SsmserverWeb.Schema}, default_value: nil, deprecation: nil, description: nil, name: "id", type: %Absinthe.Type.NonNull{of_type: :integer}}}, complexi (truncated)
-17:04:29.613 #PID<0.1813.0> running SsmserverWeb.Endpoint (connection #PID<0.1812.0>, stream id 1) terminated
-Server: localhost:4000 (http)
-Request: POST /api/graphiql
-** (exit) an exception was raised:
-    ** (Ecto.ConstraintError) constraint error when attempting to insert struct:
-
-    * products_pkey (unique_constraint)
-
-If you would like to stop this constraint violation from raising an
-exception and instead add it as an error to your changeset, please
-call `unique_constraint/3` on your changeset with the constraint
-`:name` as an option.
-
-The changeset has not defined any constraint.
-
-        (ecto) lib/ecto/repo/schema.ex:694: anonymous fn/4 in Ecto.Repo.Schema.constraints_to_errors/3
-        (elixir) lib/enum.ex:1327: Enum."-map/2-lists^map/1-0-"/2
-        (ecto) lib/ecto/repo/schema.ex:679: Ecto.Repo.Schema.constraints_to_errors/3
-        (ecto) lib/ecto/repo/schema.ex:660: Ecto.Repo.Schema.apply/4
-        (ecto) lib/ecto/repo/schema.ex:263: anonymous fn/15 in Ecto.Repo.Schema.do_insert/4
-        (ssmserver) lib/ssmserver/products/product_resolver.ex:18: SsmserverWeb.ProductResolver.create_product/2
+    ** (Protocol.UndefinedError) protocol Enumerable not implemented for {:ok, [%Ssmserver.Products.Product{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "products">, barcode: "12AB1S1ISJ239C", brand: "Neslte", category: nil, inserted_at: ~N[2020-05-21 10:24:14], lastordered: "4/3/2020", lastscan: "4/3/2020", name: "Milk", price: 20.5, prlocation: "A2", quantity: 0, supplier: nil, updated_at: ~N[2020-05-21 10:24:14], whlocation: "Beirut"}, %Ssmserver.Products.Product{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "products">, barcode: "1231235", brand: "Neslte", category: nil, inserted_at: ~N[2020-05-21 10:25:26], lastordered: nil, lastscan: "2020-05-21 10:46:11.232000Z", name: "Water", price: 20.5, prlocation: "A1,B2,B3", quantity: 0, supplier: nil, updated_at: ~N[2020-05-21 10:46:11], whlocation: "Beirut"}, %Ssmserver.Products.Product{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "products">, barcode: "123123", brand: "Neslte", category: nil, inserted_at: ~N[2020-05-21 10:24:56], lastordered: nil, lastscan: "2020-05-21 17:41:31.499000Z", name: "Nescafe1", price: 20.5, prlocation: "A1,A2,A3", quantity: 150, supplier: nil, updated_at: ~N[2020-05-21 17:41:31], whlocation: "Beirut"}, %Ssmserver.Products.Product{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "products">, barcode: "123123225", brand: "Neslte", category: nil, inserted_at: ~N[2020-05-21 10:25:51], lastordered: nil, lastscan: "2020-05-21 17:41:31.499000Z", name: "Water", price: 20.5, prlocation: "a1,b1,c1", quantity: 99, supplier: nil, updated_at: ~N[2020-05-21 17:41:31], whlocation: "Beirut"}, %Ssmserver.Products.Product{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "products">, barcode: "1231232235", brand: "Neslte", category: nil, inserted_at: ~N[2020-05-23 13:48:07], lastordered: nil, lastscan: nil, name: "Salmon", price: 20.5, prlocation: "a1,b1,c1", quantity: 50, supplier: nil, updated_at: ~N[2020-05-23 13:48:07], whlocation: "Beirut"}, %Ssmserver.Products.Product{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "products">, barcode: "9982725171", brand: "Ghnadour", category: nil, inserted_at: ~N[2020-05-23 13:48:41], lastordered: nil, lastscan: nil, name: "Digestives", price: 20.5, prlocation: "a1,b2,c3", quantity: 70, supplier: nil, updated_at: ~N[2020-05-23 13:48:41], whlocation: "Beirut"}, %Ssmserver.Products.Product{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "products">, barcode: "99823725171", brand: "Mcveties", category: nil, inserted_at: ~N[2020-05-23 14:04:42], lastordered: nil, lastscan: nil, name: "Digestives", price: 20.5, prlocation: "a1,b2,c3", quantity: 80, supplier: nil, updated_at: ~N[2020-05-23 14:04:42], whlocation: "Beirut"}]}. This protocol is implemented for: Ecto.Adapters.SQL.Stream, Postgrex.Stream, DBConnection.PrepareStream, DBConnection.Stream, Date.Range, File.Stream, Function, GenEvent.Stream, HashDict, HashSet, IO.Stream, List, Map, MapSet, Range, Stream
+        (elixir) /Users/jose/OSS/elixir/lib/elixir/lib/enum.ex:1: Enumerable.impl_for!/1
+        (elixir) /Users/jose/OSS/elixir/lib/elixir/lib/enum.ex:141: Enumerable.reduce/3
+        (elixir) lib/enum.ex:3015: Enum.each/2
+        (elixir) lib/enum.ex:769: Enum."-each/2-lists^foreach/1-0-"/2
+        (elixir) lib/enum.ex:769: Enum.each/2
+        (ssmserver) lib/ssmserver/history/history_resolver.ex:15: SsmserverWeb.HistoryResolver.get_history_list/2
         (absinthe) lib/absinthe/resolution.ex:206: Absinthe.Resolution.call/2
         (absinthe) lib/absinthe/phase/document/execution/resolution.ex:209: Absinthe.Phase.Document.Execution.Resolution.reduce_resolution/1
         (absinthe) lib/absinthe/phase/document/execution/resolution.ex:168: Absinthe.Phase.Document.Execution.Resolution.do_resolve_field/4
@@ -115,3 +23,178 @@ The changeset has not defined any constraint.
         (phoenix) lib/phoenix/router.ex:288: Phoenix.Router.__call__/2
         (ssmserver) lib/ssmserver_web/endpoint.ex:1: SsmserverWeb.Endpoint.plug_builder_call/2
         (ssmserver) lib/plug/debugger.ex:132: SsmserverWeb.Endpoint."call (overridable 3)"/2
+21:42:20.489 #PID<0.2707.0> running SsmserverWeb.Endpoint (connection #PID<0.2706.0>, stream id 1) terminated
+Server: localhost:4000 (http)
+Request: POST /api/graphiql
+** (exit) an exception was raised:
+    ** (BadMapError) expected a map, got: :ok
+        (elixir) lib/map.ex:437: Map.get(:ok, :date, nil)
+        (absinthe) lib/absinthe/middleware/map_get.ex:9: Absinthe.Middleware.MapGet.call/2
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:209: Absinthe.Phase.Document.Execution.Resolution.reduce_resolution/1
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:168: Absinthe.Phase.Document.Execution.Resolution.do_resolve_field/4
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:153: Absinthe.Phase.Document.Execution.Resolution.do_resolve_fields/6
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:72: Absinthe.Phase.Document.Execution.Resolution.walk_result/5
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:98: Absinthe.Phase.Document.Execution.Resolution.walk_results/6
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:87: Absinthe.Phase.Document.Execution.Resolution.walk_result/5
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:257: Absinthe.Phase.Document.Execution.Resolution.build_result/4
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:153: Absinthe.Phase.Document.Execution.Resolution.do_resolve_fields/6
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:72: Absinthe.Phase.Document.Execution.Resolution.walk_result/5
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:53: Absinthe.Phase.Document.Execution.Resolution.perform_resolution/3
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:24: Absinthe.Phase.Document.Execution.Resolution.resolve_current/3
+        (absinthe) lib/absinthe/pipeline.ex:274: Absinthe.Pipeline.run_phase/3
+        (absinthe_plug) lib/absinthe/plug.ex:421: Absinthe.Plug.run_query/4
+        (absinthe_plug) lib/absinthe/plug.ex:247: Absinthe.Plug.call/2
+        (phoenix) lib/phoenix/router/route.ex:41: Phoenix.Router.Route.call/2
+        (phoenix) lib/phoenix/router.ex:288: Phoenix.Router.__call__/2
+        (ssmserver) lib/ssmserver_web/endpoint.ex:1: SsmserverWeb.Endpoint.plug_builder_call/2
+        (ssmserver) lib/plug/debugger.ex:132: SsmserverWeb.Endpoint."call (overridable 3)"/2
+21:42:53.969 #PID<0.2728.0> running SsmserverWeb.Endpoint (connection #PID<0.2727.0>, stream id 1) terminated
+Server: localhost:4000 (http)
+Request: POST /api/graphiql
+** (exit) an exception was raised:
+    ** (BadMapError) expected a map, got: [nil, nil, nil, nil, nil, nil, nil]
+        (elixir) lib/map.ex:437: Map.get([nil, nil, nil, nil, nil, nil, nil], :date, nil)
+        (absinthe) lib/absinthe/middleware/map_get.ex:9: Absinthe.Middleware.MapGet.call/2
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:209: Absinthe.Phase.Document.Execution.Resolution.reduce_resolution/1
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:168: Absinthe.Phase.Document.Execution.Resolution.do_resolve_field/4
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:153: Absinthe.Phase.Document.Execution.Resolution.do_resolve_fields/6
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:72: Absinthe.Phase.Document.Execution.Resolution.walk_result/5
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:98: Absinthe.Phase.Document.Execution.Resolution.walk_results/6
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:87: Absinthe.Phase.Document.Execution.Resolution.walk_result/5
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:257: Absinthe.Phase.Document.Execution.Resolution.build_result/4
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:153: Absinthe.Phase.Document.Execution.Resolution.do_resolve_fields/6
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:72: Absinthe.Phase.Document.Execution.Resolution.walk_result/5
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:53: Absinthe.Phase.Document.Execution.Resolution.perform_resolution/3
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:24: Absinthe.Phase.Document.Execution.Resolution.resolve_current/3
+        (absinthe) lib/absinthe/pipeline.ex:274: Absinthe.Pipeline.run_phase/3
+        (absinthe_plug) lib/absinthe/plug.ex:421: Absinthe.Plug.run_query/4
+        (absinthe_plug) lib/absinthe/plug.ex:247: Absinthe.Plug.call/2
+        (phoenix) lib/phoenix/router/route.ex:41: Phoenix.Router.Route.call/2
+        (phoenix) lib/phoenix/router.ex:288: Phoenix.Router.__call__/2
+        (ssmserver) lib/ssmserver_web/endpoint.ex:1: SsmserverWeb.Endpoint.plug_builder_call/2
+        (ssmserver) lib/plug/debugger.ex:132: SsmserverWeb.Endpoint."call (overridable 3)"/2
+21:43:30.288 #PID<0.2752.0> running SsmserverWeb.Endpoint (connection #PID<0.2751.0>, stream id 1) terminated
+Server: localhost:4000 (http)
+Request: POST /api/graphiql
+** (exit) an exception was raised:
+    ** (BadMapError) expected a map, got: [%Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 17:41:36.176000Z", id: 1, inserted_at: ~N[2020-05-19 17:41:36], product: "12758198623", quantity: 100, updated_at: ~N[2020-05-19 17:41:36]}, %Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 17:41:36.176000Z", id: 1, inserted_at: ~N[2020-05-19 17:41:36], product: "12758198623", quantity: 100, updated_at: ~N[2020-05-19 17:41:36]}, %Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 17:41:36.176000Z", id: 1, inserted_at: ~N[2020-05-19 17:41:36], product: "12758198623", quantity: 100, updated_at: ~N[2020-05-19 17:41:36]}, %Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 17:41:36.176000Z", id: 1, inserted_at: ~N[2020-05-19 17:41:36], product: "12758198623", quantity: 100, updated_at: ~N[2020-05-19 17:41:36]}, %Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 17:41:36.176000Z", id: 1, inserted_at: ~N[2020-05-19 17:41:36], product: "12758198623", quantity: 100, updated_at: ~N[2020-05-19 17:41:36]}, %Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 17:41:36.176000Z", id: 1, inserted_at: ~N[2020-05-19 17:41:36], product: "12758198623", quantity: 100, updated_at: ~N[2020-05-19 17:41:36]}, %Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 17:41:36.176000Z", id: 1, inserted_at: ~N[2020-05-19 17:41:36], product: "12758198623", quantity: 100, updated_at: ~N[2020-05-19 17:41:36]}]
+        (elixir) lib/map.ex:437: Map.get([%Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 17:41:36.176000Z", id: 1, inserted_at: ~N[2020-05-19 17:41:36], product: "12758198623", quantity: 100, updated_at: ~N[2020-05-19 17:41:36]}, %Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 17:41:36.176000Z", id: 1, inserted_at: ~N[2020-05-19 17:41:36], product: "12758198623", quantity: 100, updated_at: ~N[2020-05-19 17:41:36]}, %Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 17:41:36.176000Z", id: 1, inserted_at: ~N[2020-05-19 17:41:36], product: "12758198623", quantity: 100, updated_at: ~N[2020-05-19 17:41:36]}, %Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 17:41:36.176000Z", id: 1, inserted_at: ~N[2020-05-19 17:41:36], product: "12758198623", quantity: 100, updated_at: ~N[2020-05-19 17:41:36]}, %Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 17:41:36.176000Z", id: 1, inserted_at: ~N[2020-05-19 17:41:36], product: "12758198623", quantity: 100, updated_at: ~N[2020-05-19 17:41:36]}, %Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 17:41:36.176000Z", id: 1, inserted_at: ~N[2020-05-19 17:41:36], product: "12758198623", quantity: 100, updated_at: ~N[2020-05-19 17:41:36]}, %Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 17:41:36.176000Z", id: 1, inserted_at: ~N[2020-05-19 17:41:36], product: "12758198623", quantity: 100, updated_at: ~N[2020-05-19 17:41:36]}], :date, nil)
+        (absinthe) lib/absinthe/middleware/map_get.ex:9: Absinthe.Middleware.MapGet.call/2
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:209: Absinthe.Phase.Document.Execution.Resolution.reduce_resolution/1
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:168: Absinthe.Phase.Document.Execution.Resolution.do_resolve_field/4
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:153: Absinthe.Phase.Document.Execution.Resolution.do_resolve_fields/6
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:72: Absinthe.Phase.Document.Execution.Resolution.walk_result/5
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:98: Absinthe.Phase.Document.Execution.Resolution.walk_results/6
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:87: Absinthe.Phase.Document.Execution.Resolution.walk_result/5
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:257: Absinthe.Phase.Document.Execution.Resolution.build_result/4
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:153: Absinthe.Phase.Document.Execution.Resolution.do_resolve_fields/6
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:72: Absinthe.Phase.Document.Execution.Resolution.walk_result/5
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:53: Absinthe.Phase.Document.Execution.Resolution.perform_resolution/3
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:24: Absinthe.Phase.Document.Execution.Resolution.resolve_current/3
+        (absinthe) lib/absinthe/pipeline.ex:274: Absinthe.Pipeline.run_phase/3
+        (absinthe_plug) lib/absinthe/plug.ex:421: Absinthe.Plug.run_query/4
+        (absinthe_plug) lib/absinthe/plug.ex:247: Absinthe.Plug.call/2
+        (phoenix) lib/phoenix/router/route.ex:41: Phoenix.Router.Route.call/2
+        (phoenix) lib/phoenix/router.ex:288: Phoenix.Router.__call__/2
+        (ssmserver) lib/ssmserver_web/endpoint.ex:1: SsmserverWeb.Endpoint.plug_builder_call/2
+        (ssmserver) lib/plug/debugger.ex:132: SsmserverWeb.Endpoint."call (overridable 3)"/2
+21:43:54.245 #PID<0.2773.0> running SsmserverWeb.Endpoint (connection #PID<0.2772.0>, stream id 1) terminated
+Server: localhost:4000 (http)
+Request: POST /api/graphiql
+** (exit) an exception was raised:
+    ** (UndefinedFunctionError) function Enum.eachs/2 is undefined or private
+        (elixir) Enum.eachs([%Ssmserver.Products.Product{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "products">, barcode: "12AB1S1ISJ239C", brand: "Neslte", category: nil, inserted_at: ~N[2020-05-21 10:24:14], lastordered: "4/3/2020", lastscan: "4/3/2020", name: "Milk", price: 20.5, prlocation: "A2", quantity: 0, supplier: nil, updated_at: ~N[2020-05-21 10:24:14], whlocation: "Beirut"}, %Ssmserver.Products.Product{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "products">, barcode: "1231235", brand: "Neslte", category: nil, inserted_at: ~N[2020-05-21 10:25:26], lastordered: nil, lastscan: "2020-05-21 10:46:11.232000Z", name: "Water", price: 20.5, prlocation: "A1,B2,B3", quantity: 0, supplier: nil, updated_at: ~N[2020-05-21 10:46:11], whlocation: "Beirut"}, %Ssmserver.Products.Product{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "products">, barcode: "123123", brand: "Neslte", category: nil, inserted_at: ~N[2020-05-21 10:24:56], lastordered: nil, lastscan: "2020-05-21 17:41:31.499000Z", name: "Nescafe1", price: 20.5, prlocation: "A1,A2,A3", quantity: 150, supplier: nil, updated_at: ~N[2020-05-21 17:41:31], whlocation: "Beirut"}, %Ssmserver.Products.Product{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "products">, barcode: "123123225", brand: "Neslte", category: nil, inserted_at: ~N[2020-05-21 10:25:51], lastordered: nil, lastscan: "2020-05-21 17:41:31.499000Z", name: "Water", price: 20.5, prlocation: "a1,b1,c1", quantity: 99, supplier: nil, updated_at: ~N[2020-05-21 17:41:31], whlocation: "Beirut"}, %Ssmserver.Products.Product{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "products">, barcode: "1231232235", brand: "Neslte", category: nil, inserted_at: ~N[2020-05-23 13:48:07], lastordered: nil, lastscan: nil, name: "Salmon", price: 20.5, prlocation: "a1,b1,c1", quantity: 50, supplier: nil, updated_at: ~N[2020-05-23 13:48:07], whlocation: "Beirut"}, %Ssmserver.Products.Product{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "products">, barcode: "9982725171", brand: "Ghnadour", category: nil, inserted_at: ~N[2020-05-23 13:48:41], lastordered: nil, lastscan: nil, name: "Digestives", price: 20.5, prlocation: "a1,b2,c3", quantity: 70, supplier: nil, updated_at: ~N[2020-05-23 13:48:41], whlocation: "Beirut"}, %Ssmserver.Products.Product{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "products">, barcode: "99823725171", brand: "Mcveties", category: nil, inserted_at: ~N[2020-05-23 14:04:42], lastordered: nil, lastscan: nil, name: "Digestives", price: 20.5, prlocation: "a1,b2,c3", quantity: 80, supplier: nil, updated_at: ~N[2020-05-23 14:04:42], whlocation: "Beirut"}], #Function<1.112982020/1 in SsmserverWeb.HistoryResolver.get_history_list/2>)
+        (elixir) lib/enum.ex:1327: Enum."-map/2-lists^map/1-0-"/2
+        (ssmserver) lib/ssmserver/history/history_resolver.ex:15: SsmserverWeb.HistoryResolver.get_history_list/2
+        (absinthe) lib/absinthe/resolution.ex:206: Absinthe.Resolution.call/2
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:209: Absinthe.Phase.Document.Execution.Resolution.reduce_resolution/1
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:168: Absinthe.Phase.Document.Execution.Resolution.do_resolve_field/4
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:153: Absinthe.Phase.Document.Execution.Resolution.do_resolve_fields/6
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:72: Absinthe.Phase.Document.Execution.Resolution.walk_result/5
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:53: Absinthe.Phase.Document.Execution.Resolution.perform_resolution/3
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:24: Absinthe.Phase.Document.Execution.Resolution.resolve_current/3
+        (absinthe) lib/absinthe/pipeline.ex:274: Absinthe.Pipeline.run_phase/3
+        (absinthe_plug) lib/absinthe/plug.ex:421: Absinthe.Plug.run_query/4
+        (absinthe_plug) lib/absinthe/plug.ex:247: Absinthe.Plug.call/2
+        (phoenix) lib/phoenix/router/route.ex:41: Phoenix.Router.Route.call/2
+        (phoenix) lib/phoenix/router.ex:288: Phoenix.Router.__call__/2
+        (ssmserver) lib/ssmserver_web/endpoint.ex:1: SsmserverWeb.Endpoint.plug_builder_call/2
+        (ssmserver) lib/plug/debugger.ex:132: SsmserverWeb.Endpoint."call (overridable 3)"/2
+        (ssmserver) lib/ssmserver_web/endpoint.ex:1: SsmserverWeb.Endpoint.call/2
+        (phoenix) lib/phoenix/endpoint/cowboy2_handler.ex:42: Phoenix.Endpoint.Cowboy2Handler.init/4
+        (cowboy) c:/Users/User/Desktop/ssmserver/deps/cowboy/src/cowboy_handler.erl:41: :cowboy_handler.execute/2
+21:44:34.460 #PID<0.2796.0> running SsmserverWeb.Endpoint (connection #PID<0.2795.0>, stream id 1) terminated
+Server: localhost:4000 (http)
+Request: POST /api/graphiql
+** (exit) an exception was raised:
+    ** (BadMapError) expected a map, got: :ok
+        (elixir) lib/map.ex:437: Map.get(:ok, :date, nil)
+        (absinthe) lib/absinthe/middleware/map_get.ex:9: Absinthe.Middleware.MapGet.call/2
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:209: Absinthe.Phase.Document.Execution.Resolution.reduce_resolution/1
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:168: Absinthe.Phase.Document.Execution.Resolution.do_resolve_field/4
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:153: Absinthe.Phase.Document.Execution.Resolution.do_resolve_fields/6
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:72: Absinthe.Phase.Document.Execution.Resolution.walk_result/5
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:98: Absinthe.Phase.Document.Execution.Resolution.walk_results/6
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:87: Absinthe.Phase.Document.Execution.Resolution.walk_result/5
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:257: Absinthe.Phase.Document.Execution.Resolution.build_result/4
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:153: Absinthe.Phase.Document.Execution.Resolution.do_resolve_fields/6
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:72: Absinthe.Phase.Document.Execution.Resolution.walk_result/5
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:53: Absinthe.Phase.Document.Execution.Resolution.perform_resolution/3
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:24: Absinthe.Phase.Document.Execution.Resolution.resolve_current/3
+        (absinthe) lib/absinthe/pipeline.ex:274: Absinthe.Pipeline.run_phase/3
+        (absinthe_plug) lib/absinthe/plug.ex:421: Absinthe.Plug.run_query/4
+        (absinthe_plug) lib/absinthe/plug.ex:247: Absinthe.Plug.call/2
+        (phoenix) lib/phoenix/router/route.ex:41: Phoenix.Router.Route.call/2
+        (phoenix) lib/phoenix/router.ex:288: Phoenix.Router.__call__/2
+        (ssmserver) lib/ssmserver_web/endpoint.ex:1: SsmserverWeb.Endpoint.plug_builder_call/2
+        (ssmserver) lib/plug/debugger.ex:132: SsmserverWeb.Endpoint."call (overridable 3)"/2
+21:52:50.146 #PID<0.2837.0> running SsmserverWeb.Endpoint (connection #PID<0.2836.0>, stream id 1) terminated
+Server: localhost:4000 (http)
+Request: POST /api/graphiql
+** (exit) an exception was raised:
+    ** (BadMapError) expected a map, got: [%{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, __struct__: Ssmserver.Histories.History, date: "2020-05-19 19:09:04.837000Z", id: 19, inserted_at: ~N[2020-05-19 19:09:04], name: "Milk", product: "12AB1S1ISJ239C", quantity: 99, updated_at: ~N[2020-05-19 19:09:04]}, %Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 19:09:04.837000Z", id: 19, inserted_at: ~N[2020-05-19 19:09:04], product: "12AB1S1ISJ239C", quantity: 99, updated_at: ~N[2020-05-19 19:09:04]}, %Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 19:09:04.837000Z", id: 19, inserted_at: ~N[2020-05-19 19:09:04], product: "12AB1S1ISJ239C", quantity: 99, updated_at: ~N[2020-05-19 19:09:04]}, %Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 19:09:04.837000Z", id: 19, inserted_at: ~N[2020-05-19 19:09:04], product: "12AB1S1ISJ239C", quantity: 99, updated_at: ~N[2020-05-19 19:09:04]}, %Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 19:09:04.837000Z", id: 19, inserted_at: ~N[2020-05-19 19:09:04], product: "12AB1S1ISJ239C", quantity: 99, updated_at: ~N[2020-05-19 19:09:04]}, %Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 19:09:04.837000Z", id: 19, inserted_at: ~N[2020-05-19 19:09:04], product: "12AB1S1ISJ239C", quantity: 99, updated_at: ~N[2020-05-19 19:09:04]}, %Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 19:09:04.837000Z", id: 19, inserted_at: ~N[2020-05-19 19:09:04], product: "12AB1S1ISJ239C", quantity: 99, updated_at: ~N[2020-05-19 19:09:04]}]
+        (elixir) lib/map.ex:437: Map.get([%{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, __struct__: Ssmserver.Histories.History, date: "2020-05-19 19:09:04.837000Z", id: 19, inserted_at: ~N[2020-05-19 19:09:04], name: "Milk", product: "12AB1S1ISJ239C", quantity: 99, updated_at: ~N[2020-05-19 19:09:04]}, %Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 19:09:04.837000Z", id: 19, inserted_at: ~N[2020-05-19 19:09:04], product: "12AB1S1ISJ239C", quantity: 99, updated_at: ~N[2020-05-19 19:09:04]}, %Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 19:09:04.837000Z", id: 19, inserted_at: ~N[2020-05-19 19:09:04], product: "12AB1S1ISJ239C", quantity: 99, updated_at: ~N[2020-05-19 19:09:04]}, %Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 19:09:04.837000Z", id: 19, inserted_at: ~N[2020-05-19 19:09:04], product: "12AB1S1ISJ239C", quantity: 99, updated_at: ~N[2020-05-19 19:09:04]}, %Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 19:09:04.837000Z", id: 19, inserted_at: ~N[2020-05-19 19:09:04], product: "12AB1S1ISJ239C", quantity: 99, updated_at: ~N[2020-05-19 19:09:04]}, %Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 19:09:04.837000Z", id: 19, inserted_at: ~N[2020-05-19 19:09:04], product: "12AB1S1ISJ239C", quantity: 99, updated_at: ~N[2020-05-19 19:09:04]}, %Ssmserver.Histories.History{__meta__: #Ecto.Schema.Metadata<:loaded, "ssm", "history">, date: "2020-05-19 19:09:04.837000Z", id: 19, inserted_at: ~N[2020-05-19 19:09:04], product: "12AB1S1ISJ239C", quantity: 99, updated_at: ~N[2020-05-19 19:09:04]}], :date, nil)
+        (absinthe) lib/absinthe/middleware/map_get.ex:9: Absinthe.Middleware.MapGet.call/2
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:209: Absinthe.Phase.Document.Execution.Resolution.reduce_resolution/1
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:168: Absinthe.Phase.Document.Execution.Resolution.do_resolve_field/4
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:153: Absinthe.Phase.Document.Execution.Resolution.do_resolve_fields/6
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:72: Absinthe.Phase.Document.Execution.Resolution.walk_result/5
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:98: Absinthe.Phase.Document.Execution.Resolution.walk_results/6
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:87: Absinthe.Phase.Document.Execution.Resolution.walk_result/5
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:257: Absinthe.Phase.Document.Execution.Resolution.build_result/4
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:153: Absinthe.Phase.Document.Execution.Resolution.do_resolve_fields/6
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:72: Absinthe.Phase.Document.Execution.Resolution.walk_result/5
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:53: Absinthe.Phase.Document.Execution.Resolution.perform_resolution/3
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:24: Absinthe.Phase.Document.Execution.Resolution.resolve_current/3
+        (absinthe) lib/absinthe/pipeline.ex:274: Absinthe.Pipeline.run_phase/3
+        (absinthe_plug) lib/absinthe/plug.ex:421: Absinthe.Plug.run_query/4
+        (absinthe_plug) lib/absinthe/plug.ex:247: Absinthe.Plug.call/2
+        (phoenix) lib/phoenix/router/route.ex:41: Phoenix.Router.Route.call/2
+        (phoenix) lib/phoenix/router.ex:288: Phoenix.Router.__call__/2
+        (ssmserver) lib/ssmserver_web/endpoint.ex:1: SsmserverWeb.Endpoint.plug_builder_call/2
+        (ssmserver) lib/plug/debugger.ex:132: SsmserverWeb.Endpoint."call (overridable 3)"/2
+22:00:16.699 #PID<0.2878.0> running SsmserverWeb.Endpoint (connection #PID<0.2877.0>, stream id 1) terminated
+Server: localhost:4000 (http)
+Request: POST /api/graphiql
+** (exit) an exception was raised:
+    ** (UndefinedFunctionError) function nil.name/0 is undefined
+        nil.name()
+        (ssmserver) lib/ssmserver/history/history_resolver.ex:19: anonymous fn/2 in SsmserverWeb.HistoryResolver.get_history_list/2
+        (elixir) lib/enum.ex:1327: Enum."-map/2-lists^map/1-0-"/2
+        (elixir) lib/enum.ex:1327: Enum."-map/2-lists^map/1-0-"/2
+        (ssmserver) lib/ssmserver/history/history_resolver.ex:15: SsmserverWeb.HistoryResolver.get_history_list/2
+        (absinthe) lib/absinthe/resolution.ex:206: Absinthe.Resolution.call/2
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:209: Absinthe.Phase.Document.Execution.Resolution.reduce_resolution/1
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:168: Absinthe.Phase.Document.Execution.Resolution.do_resolve_field/4
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:153: Absinthe.Phase.Document.Execution.Resolution.do_resolve_fields/6
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:72: Absinthe.Phase.Document.Execution.Resolution.walk_result/5
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:53: Absinthe.Phase.Document.Execution.Resolution.perform_resolution/3
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:24: Absinthe.Phase.Document.Execution.Resolution.resolve_current/3
+        (absinthe) lib/absinthe/pipeline.ex:274: Absinthe.Pipeline.run_phase/3
+        (absinthe_plug) lib/absinthe/plug.ex:421: Absinthe.Plug.run_query/4
+        (absinthe_plug) lib/absinthe/plug.ex:247: Absinthe.Plug.call/2
+        (phoenix) lib/phoenix/router/route.ex:41: Phoenix.Router.Route.call/2
+        (phoenix) lib/phoenix/router.ex:288: Phoenix.Router.__call__/2
+        (ssmserver) lib/ssmserver_web/endpoint.ex:1: SsmserverWeb.Endpoint.plug_builder_call/2
+        (ssmserver) lib/plug/debugger.ex:132: SsmserverWeb.Endpoint."call (overridable 3)"/2
+        (ssmserver) lib/ssmserver_web/endpoint.ex:1: SsmserverWeb.Endpoint.call/2

@@ -48,6 +48,11 @@ defmodule SsmserverWeb.Schema do
       resolve(&AlertResolver.get_alerts/2)
     end
 
+    @desc "return all scans"
+    field :history, type: list_of(:history) do
+      resolve(&HistoryResolver.get_history_list/2)
+    end
+
     @desc "return all alerts"
     field :replenishments, type: list_of(:replenishment) do
       resolve(&ReplenishmentResolver.get_replenishments/2)
