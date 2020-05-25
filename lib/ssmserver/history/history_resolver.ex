@@ -7,7 +7,14 @@ defmodule SsmserverWeb.HistoryResolver do
   def create_history(args, _info) do
     Histories.create_history(args)
   end
-
+  def get_history_list_sorted_by_date(_a, _b) do
+    res =
+    Histories.scans_sorted_by_date_total()
+      |> Enum.map(fn {quantity, date}->
+         %{date: date |> String.split(".") |> Enum.at(0), total: quantity}
+      end)
+    {:ok, res}
+  end
   def get_history_list(_args, _info) do
     {:ok, products} = ProductResolver.get_products("","")
 

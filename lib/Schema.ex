@@ -49,8 +49,8 @@ defmodule SsmserverWeb.Schema do
     end
 
     @desc "return all scans"
-    field :history, type: list_of(:history) do
-      resolve(&HistoryResolver.get_history_list/2)
+    field :history, type: list_of(:history_total) do
+      resolve(&HistoryResolver.get_history_list_sorted_by_date/2)
     end
 
     @desc "return all alerts"

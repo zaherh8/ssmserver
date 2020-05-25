@@ -61,15 +61,14 @@ defmodule SsmserverWeb.ProductResolver do
     res =
       case update_at_once(products) do
         {:ok, _} ->
-          {:ok, %{text: "all Products updated"}}
+          begin_tasks(products)
+          {:ok, %{text: "All products are updated"}}
 
         _ ->
-          {:error, %{text: "Something went wrong, please try again later."}}
+          {:error, %{text: "Oops, something went wrong. Please try again later."}}
       end
 
-    begin_tasks(products)
     res
-    # Products.update_product(Products.get_product!(Map.get(args, :barcode)), args)
   end
 
   def top_five_products(_args, _info) do

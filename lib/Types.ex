@@ -18,6 +18,11 @@ defmodule SsmserverWeb.Types do
     field(:quantity, :integer)
   end
 
+  object :history_total do
+    field(:date, :string)
+    field(:total , :integer)
+  end
+
   object :user do
     field(:username, :string)
     field(:role, :string)

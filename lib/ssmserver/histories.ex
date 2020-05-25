@@ -107,4 +107,9 @@ defmodule Ssmserver.Histories do
       from h in History, distinct: (h.date)
     ))
   end
+  def scans_sorted_by_date_total do
+    Repo.all(
+     from h in History, group_by: (h.date), select: {sum(h.quantity), h.date}
+    )
+  end
 end
