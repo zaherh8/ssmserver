@@ -1,3 +1,29 @@
 23:16:33.572 A low stock inventory alert of the following product 'Nescafe1' was sent to all managers
 23:16:33.572 A low stock inventory alert of the following product 'Water' was sent to all managers
 19:50:52.661 Phoenix is unable to create symlinks. Phoenix' code reloader will run considerably faster if symlinks are allowed. On Windows, the lack of symlinks may even cause empty assets to be served. Luckily, you can address this issue by starting your Windows terminal at least once with "Run as Administrator" and then running your Phoenix application.
+12:49:31.799 Phoenix is unable to create symlinks. Phoenix' code reloader will run considerably faster if symlinks are allowed. On Windows, the lack of symlinks may even cause empty assets to be served. Luckily, you can address this issue by starting your Windows terminal at least once with "Run as Administrator" and then running your Phoenix application.
+13:57:05.271 #PID<0.779.0> running SsmserverWeb.Endpoint (connection #PID<0.777.0>, stream id 1) terminated
+Server: localhost:4000 (http)
+Request: GET /api/graphiql?variables=%7B%7D&query=%7B%0A%20%20history%7Bdate%0A%20%20%20%20products%0A%20%20total%7D%0A%7D
+** (exit) an exception was raised:
+    ** (FunctionClauseError) no function clause matching in anonymous fn/1 in SsmserverWeb.HistoryResolver.get_history_list_sorted_by_date/2
+        (ssmserver) lib/ssmserver/history/history_resolver.ex:13: anonymous fn(%{date: "2020-05-24 20:16:33.546000Z", products: "Water, Nescafe1", quanitity: 199}) in SsmserverWeb.HistoryResolver.get_history_list_sorted_by_date/2
+        (elixir) lib/enum.ex:1327: Enum."-map/2-lists^map/1-0-"/2
+        (ssmserver) lib/ssmserver/history/history_resolver.ex:13: SsmserverWeb.HistoryResolver.get_history_list_sorted_by_date/2
+        (absinthe) lib/absinthe/resolution.ex:206: Absinthe.Resolution.call/2
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:209: Absinthe.Phase.Document.Execution.Resolution.reduce_resolution/1
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:168: Absinthe.Phase.Document.Execution.Resolution.do_resolve_field/4
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:153: Absinthe.Phase.Document.Execution.Resolution.do_resolve_fields/6
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:72: Absinthe.Phase.Document.Execution.Resolution.walk_result/5
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:53: Absinthe.Phase.Document.Execution.Resolution.perform_resolution/3
+        (absinthe) lib/absinthe/phase/document/execution/resolution.ex:24: Absinthe.Phase.Document.Execution.Resolution.resolve_current/3
+        (absinthe) lib/absinthe/pipeline.ex:274: Absinthe.Pipeline.run_phase/3
+        (absinthe_plug) lib/absinthe/plug.ex:421: Absinthe.Plug.run_query/4
+        (absinthe_plug) lib/absinthe/plug/graphiql.ex:210: Absinthe.Plug.GraphiQL.do_call/2
+        (phoenix) lib/phoenix/router/route.ex:41: Phoenix.Router.Route.call/2
+        (phoenix) lib/phoenix/router.ex:288: Phoenix.Router.__call__/2
+        (ssmserver) lib/ssmserver_web/endpoint.ex:1: SsmserverWeb.Endpoint.plug_builder_call/2
+        (ssmserver) lib/plug/debugger.ex:132: SsmserverWeb.Endpoint."call (overridable 3)"/2
+        (ssmserver) lib/ssmserver_web/endpoint.ex:1: SsmserverWeb.Endpoint.call/2
+        (phoenix) lib/phoenix/endpoint/cowboy2_handler.ex:42: Phoenix.Endpoint.Cowboy2Handler.init/4
+        (cowboy) c:/Users/User/Desktop/ssmserver/deps/cowboy/src/cowboy_handler.erl:41: :cowboy_handler.execute/2

@@ -20,7 +20,8 @@ defmodule SsmserverWeb.Types do
 
   object :history_total do
     field(:date, :string)
-    field(:total , :integer)
+    field(:total, :integer)
+    field(:products, :string)
   end
 
   object :user do

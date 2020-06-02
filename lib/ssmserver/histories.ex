@@ -5,7 +5,7 @@ defmodule Ssmserver.Histories do
 
   import Ecto.Query, warn: false
   alias Ssmserver.Repo
-
+  alias Ssmserver.Products.Product
   alias Ssmserver.Histories.History
 
   @doc """
@@ -108,8 +108,27 @@ defmodule Ssmserver.Histories do
     ))
   end
   def scans_sorted_by_date_total do
+    date =
     Repo.all(
-     from h in History, group_by: (h.date), select: {sum(h.quantity), h.date}
+     from h in History, select: h.date, distinct: (h.date)
     )
+    results =
+    Repo.all(
+     from h in History, join: p in Product, on: p.barcode == h.product, select: %{date: h.date, name: p.name, product: h.product}
+    )
+    |> Enum.reduce(%{}, fn hist, acc->
+      acc = case IO.inspect(Map.get(acc, hist.date), label: "case") do
+        nil -> Map.put(acc, hist.date, hist.name)
+        product -> Map.put(acc, hist.date, hist.name <> ", " <> product)
+      end
+      acc
+    end)
+    |>IO.inspect(label: "result")
+    Repo.all(
+     from h in History, group_by: (h.date), select: %{total: sum(h.quantity), date: h.date}
+    )
+    |> Enum.map(fn hist ->
+      Map.merge(hist, %{products: Map.get(results, hist.date)})
+    end)
   end
 end
