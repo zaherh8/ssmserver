@@ -3,8 +3,44 @@
     "id": 1,
     "name": "Leanne Graham",
     "metadata": {
-    "title": "Bret",
-    "department": "Sincere@april.biz"},
+    "title": "Front-End developer",
+    "department": "Technical"},
+    "address": {
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "email": "leanne-graham@gmail.com"
+  },
+   {
+    "id": 2,
+    "name": "Maurice Gabrielle",
+    "metadata": {
+    "title": "Back-End developer",
+    "department": "Technical"},
+    "address": {
+      "street": "Wall Street",
+      "suite": "Apt. 102",
+      "city": "New York",
+      "zipcode": "10000-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "email": "maurice-gabrielle@gmail.com"
+  },
+   {
+    "id": 3,
+    "name": "Leanne Graham",
+    "metadata": {
+    "title": "Team Leader",
+    "department": "Technical"},
     "address": {
       "street": "Kulas Light",
       "suite": "Apt. 556",
@@ -16,6 +52,25 @@
       }
     },
     "email": "joe-doe@gmail.com"
-  }
+  },
+    {
+    "id": 4,
+    "name": "Leonardo Debora",
+    "metadata": {
+    "title": "Consultant",
+    "department": "Management"
+    },
+    "address": {
+      "street": "Beverly Hills",
+      "suite": "Apt. 556",
+      "city": "Los Angelos",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "email": "leonardo-debora@gmail.com"
+  },
 ]
 }
